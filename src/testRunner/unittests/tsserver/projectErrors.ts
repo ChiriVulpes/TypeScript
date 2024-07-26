@@ -24,16 +24,16 @@ import {
 describe("unittests:: tsserver:: projectErrors::", () => {
     it("external project - diagnostics for missing files", () => {
         const file1 = {
-            path: "/a/b/app.ts",
+            path: "/home/src/projects/project/a/b/app.ts",
             content: "",
         };
         const file2 = {
-            path: "/a/b/applib.ts",
+            path: "/home/src/projects/project/a/b/applib.ts",
             content: "",
         };
         const host = createServerHost([file1, libFile]);
         const session = new TestSession(host);
-        const projectFileName = "/a/b/test.csproj";
+        const projectFileName = "/home/src/projects/project/a/b/test.csproj";
         const compilerOptionsRequest: TestSessionRequest<ts.server.protocol.CompilerOptionsDiagnosticsRequest> = {
             command: ts.server.protocol.CommandTypes.CompilerOptionsDiagnosticsFull,
             arguments: { projectFileName },
@@ -65,15 +65,15 @@ describe("unittests:: tsserver:: projectErrors::", () => {
 
     it("configured projects - diagnostics for missing files", () => {
         const file1 = {
-            path: "/a/b/app.ts",
+            path: "/home/src/projects/project/a/b/app.ts",
             content: "",
         };
         const file2 = {
-            path: "/a/b/applib.ts",
+            path: "/home/src/projects/project/a/b/applib.ts",
             content: "",
         };
         const config = {
-            path: "/a/b/tsconfig.json",
+            path: "/home/src/projects/project/a/b/tsconfig.json",
             content: jsonToReadableText({ files: [file1, file2].map(f => ts.getBaseFileName(f.path)) }),
         };
         const host = createServerHost([file1, config, libFile]);
@@ -93,15 +93,15 @@ describe("unittests:: tsserver:: projectErrors::", () => {
 
     it("configured projects - diagnostics for corrupted config 1", () => {
         const file1 = {
-            path: "/a/b/app.ts",
+            path: "/home/src/projects/project/a/b/app.ts",
             content: "",
         };
         const file2 = {
-            path: "/a/b/lib.ts",
+            path: "/home/src/projects/project/a/b/lib.ts",
             content: "",
         };
         const correctConfig = {
-            path: "/a/b/tsconfig.json",
+            path: "/home/src/projects/project/a/b/tsconfig.json",
             content: jsonToReadableText({ files: [file1, file2].map(f => ts.getBaseFileName(f.path)) }),
         };
         const corruptedConfig = {
@@ -145,15 +145,15 @@ describe("unittests:: tsserver:: projectErrors::", () => {
 
     it("configured projects - diagnostics for corrupted config 2", () => {
         const file1 = {
-            path: "/a/b/app.ts",
+            path: "/home/src/projects/project/a/b/app.ts",
             content: "",
         };
         const file2 = {
-            path: "/a/b/lib.ts",
+            path: "/home/src/projects/project/a/b/lib.ts",
             content: "",
         };
         const correctConfig = {
-            path: "/a/b/tsconfig.json",
+            path: "/home/src/projects/project/a/b/tsconfig.json",
             content: jsonToReadableText({ files: [file1, file2].map(f => ts.getBaseFileName(f.path)) }),
         };
         const corruptedConfig = {
@@ -199,11 +199,11 @@ describe("unittests:: tsserver:: projectErrors::", () => {
 describe("unittests:: tsserver:: projectErrors:: are reported as appropriate", () => {
     it("document is not contained in project", () => {
         const file1 = {
-            path: "/a/b/app.ts",
+            path: "/home/src/projects/project/a/b/app.ts",
             content: "",
         };
         const corruptedConfig = {
-            path: "/a/b/tsconfig.json",
+            path: "/home/src/projects/project/a/b/tsconfig.json",
             content: "{",
         };
         const host = createServerHost([file1, corruptedConfig]);
@@ -287,7 +287,7 @@ describe("unittests:: tsserver:: projectErrors:: are reported as appropriate", (
 
     it("Getting errors before opening file", () => {
         const file: File = {
-            path: "/a/b/project/file.ts",
+            path: "/home/src/projects/project/a/b/project/file.ts",
             content: "let x: number = false;",
         };
         const host = createServerHost([file, libFile]);
@@ -399,14 +399,14 @@ declare module '@custom/plugin' {
     });
 });
 
-describe("unittests:: tsserver:: Project Errors for Configure file diagnostics events", () => {
+describe("unittests:: tsserver:: projectErrors:: for Configure file diagnostics events", () => {
     it("are generated when the config file has errors", () => {
         const file: File = {
-            path: "/a/b/app.ts",
+            path: "/home/src/projects/project/a/b/app.ts",
             content: "let x = 10",
         };
         const configFile: File = {
-            path: "/a/b/tsconfig.json",
+            path: "/home/src/projects/project/a/b/tsconfig.json",
             content: `{
                     "compilerOptions": {
                         "foo": "bar",
@@ -422,11 +422,11 @@ describe("unittests:: tsserver:: Project Errors for Configure file diagnostics e
 
     it("are generated when the config file doesn't have errors", () => {
         const file: File = {
-            path: "/a/b/app.ts",
+            path: "/home/src/projects/project/a/b/app.ts",
             content: "let x = 10",
         };
         const configFile: File = {
-            path: "/a/b/tsconfig.json",
+            path: "/home/src/projects/project/a/b/tsconfig.json",
             content: `{
                     "compilerOptions": {}
                 }`,
@@ -439,11 +439,11 @@ describe("unittests:: tsserver:: Project Errors for Configure file diagnostics e
 
     it("are generated when the config file changes", () => {
         const file: File = {
-            path: "/a/b/app.ts",
+            path: "/home/src/projects/project/a/b/app.ts",
             content: "let x = 10",
         };
         const configFile = {
-            path: "/a/b/tsconfig.json",
+            path: "/home/src/projects/project/a/b/tsconfig.json",
             content: `{
                     "compilerOptions": {}
                 }`,
@@ -471,19 +471,19 @@ describe("unittests:: tsserver:: Project Errors for Configure file diagnostics e
 
     it("are not generated when the config file does not include file opened and config file has errors", () => {
         const file: File = {
-            path: "/a/b/app.ts",
+            path: "/home/src/projects/project/a/b/app.ts",
             content: "let x = 10",
         };
         const file2: File = {
-            path: "/a/b/test.ts",
+            path: "/home/src/projects/project/a/b/test.ts",
             content: "let x = 10",
         };
         const file3: File = {
-            path: "/a/b/test2.ts",
+            path: "/home/src/projects/project/a/b/test2.ts",
             content: "let xy = 10",
         };
         const configFile: File = {
-            path: "/a/b/tsconfig.json",
+            path: "/home/src/projects/project/a/b/tsconfig.json",
             content: `{
                     "compilerOptions": {
                         "foo": "bar",
@@ -503,11 +503,11 @@ describe("unittests:: tsserver:: Project Errors for Configure file diagnostics e
 
     it("are not generated when the config file has errors but suppressDiagnosticEvents is true", () => {
         const file: File = {
-            path: "/a/b/app.ts",
+            path: "/home/src/projects/project/a/b/app.ts",
             content: "let x = 10",
         };
         const configFile: File = {
-            path: "/a/b/tsconfig.json",
+            path: "/home/src/projects/project/a/b/tsconfig.json",
             content: `{
                     "compilerOptions": {
                         "foo": "bar",
@@ -523,19 +523,19 @@ describe("unittests:: tsserver:: Project Errors for Configure file diagnostics e
 
     it("are not generated when the config file does not include file opened and doesnt contain any errors", () => {
         const file: File = {
-            path: "/a/b/app.ts",
+            path: "/home/src/projects/project/a/b/app.ts",
             content: "let x = 10",
         };
         const file2: File = {
-            path: "/a/b/test.ts",
+            path: "/home/src/projects/project/a/b/test.ts",
             content: "let x = 10",
         };
         const file3: File = {
-            path: "/a/b/test2.ts",
+            path: "/home/src/projects/project/a/b/test2.ts",
             content: "let xy = 10",
         };
         const configFile: File = {
-            path: "/a/b/tsconfig.json",
+            path: "/home/src/projects/project/a/b/tsconfig.json",
             content: `{
                     "files": ["app.ts"]
                 }`,
@@ -552,12 +552,12 @@ describe("unittests:: tsserver:: Project Errors for Configure file diagnostics e
 
     it("contains the project reference errors", () => {
         const file: File = {
-            path: "/a/b/app.ts",
+            path: "/home/src/projects/project/a/b/app.ts",
             content: "let x = 10",
         };
         const noSuchTsconfig = "no-such-tsconfig.json";
         const configFile: File = {
-            path: "/a/b/tsconfig.json",
+            path: "/home/src/projects/project/a/b/tsconfig.json",
             content: `{
                     "files": ["app.ts"],
                     "references": [{"path":"./${noSuchTsconfig}"}]
@@ -574,7 +574,7 @@ describe("unittests:: tsserver:: Project Errors for Configure file diagnostics e
 describe("unittests:: tsserver:: projectErrors:: dont include overwrite emit error", () => {
     it("for inferred project", () => {
         const f1 = {
-            path: "/a/b/f1.js",
+            path: "/home/src/projects/project/a/b/f1.js",
             content: "function test1() { }",
         };
         const host = createServerHost([f1, libFile]);
@@ -597,12 +597,12 @@ describe("unittests:: tsserver:: projectErrors:: dont include overwrite emit err
 
     it("for external project", () => {
         const f1 = {
-            path: "/a/b/f1.js",
+            path: "/home/src/projects/project/a/b/f1.js",
             content: "function test1() { }",
         };
         const host = createServerHost([f1, libFile]);
         const session = new TestSession(host);
-        const projectFileName = "/a/b/project.csproj";
+        const projectFileName = "/home/src/projects/project/a/b/project.csproj";
         const externalFiles = toExternalFiles([f1.path]);
         openExternalProjectForSession({
             projectFileName,
@@ -631,7 +631,7 @@ describe("unittests:: tsserver:: projectErrors:: dont include overwrite emit err
 describe("unittests:: tsserver:: projectErrors:: reports Options Diagnostic locations correctly with changes in configFile contents", () => {
     it("when options change", () => {
         const file = {
-            path: "/a/b/app.ts",
+            path: "/home/src/projects/project/a/b/app.ts",
             content: "let x = 10",
         };
         const configFileContentBeforeComment = `{`;
@@ -647,7 +647,7 @@ describe("unittests:: tsserver:: projectErrors:: reports Options Diagnostic loca
         const configFileContentWithoutCommentLine = configFileContentBeforeComment + configFileContentAfterComment;
 
         const configFile = {
-            path: "/a/b/tsconfig.json",
+            path: "/home/src/projects/project/a/b/tsconfig.json",
             content: configFileContentWithComment,
         };
         const host = createServerHost([file, libFile, configFile]);
@@ -671,9 +671,9 @@ describe("unittests:: tsserver:: projectErrors:: reports Options Diagnostic loca
 
 describe("unittests:: tsserver:: projectErrors:: with config file change", () => {
     it("Updates diagnostics when '--noUnusedLabels' changes", () => {
-        const aTs: File = { path: "/a.ts", content: "label: while (1) {}" };
+        const aTs: File = { path: "/home/src/projects/project/a.ts", content: "label: while (1) {}" };
         const options = (allowUnusedLabels: boolean) => `{ "compilerOptions": { "allowUnusedLabels": ${allowUnusedLabels} } }`;
-        const tsconfig: File = { path: "/tsconfig.json", content: options(/*allowUnusedLabels*/ true) };
+        const tsconfig: File = { path: "/home/src/projects/project/tsconfig.json", content: options(/*allowUnusedLabels*/ true) };
 
         const host = createServerHost([aTs, tsconfig]);
         const session = new TestSession(host);

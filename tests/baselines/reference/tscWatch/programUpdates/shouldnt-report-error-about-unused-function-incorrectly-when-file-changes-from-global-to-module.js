@@ -1,6 +1,6 @@
 currentDirectory:: / useCaseSensitiveFileNames: false
 Input::
-//// [/a/b/file.ts]
+//// [/user/username/workspace/projects/project/file.ts]
 function one() {}
 function two() {
     return function three() {
@@ -8,7 +8,7 @@ function two() {
     }
 }
 
-//// [/a/lib/lib.d.ts]
+//// [/home/src/tslibs/ts/lib/lib.d.ts]
 /// <reference no-default-lib="true"/>
 interface Boolean {}
 interface Function {}
@@ -22,7 +22,7 @@ interface String { charAt: any; }
 interface Array<T> { length: number; [n: number]: T; }
 
 
-/a/lib/tsc.js -w /a/b/file.ts --noUnusedLocals
+/home/src/tslibs/ts/lib/tsc.js -w /user/username/workspace/projects/project/file.ts --noUnusedLocals
 Output::
 >> Screen clear
 [[90mHH:MM:SS AM[0m] Starting compilation in watch mode...
@@ -31,7 +31,7 @@ Output::
 
 
 
-//// [/a/b/file.js]
+//// [/user/username/workspace/projects/project/file.js]
 function one() { }
 function two() {
     return function three() {
@@ -42,13 +42,13 @@ function two() {
 
 
 FsWatches::
-/a/b/file.ts: *new*
+/home/src/tslibs/ts/lib/lib.d.ts: *new*
   {}
-/a/lib/lib.d.ts: *new*
+/user/username/workspace/projects/project/file.ts: *new*
   {}
 
 Program root files: [
-  "/a/b/file.ts"
+  "/user/username/workspace/projects/project/file.ts"
 ]
 Program options: {
   "watch": true,
@@ -56,23 +56,23 @@ Program options: {
 }
 Program structureReused: Not
 Program files::
-/a/lib/lib.d.ts
-/a/b/file.ts
+/home/src/tslibs/ts/lib/lib.d.ts
+/user/username/workspace/projects/project/file.ts
 
 Semantic diagnostics in builder refreshed for::
-/a/lib/lib.d.ts
-/a/b/file.ts
+/home/src/tslibs/ts/lib/lib.d.ts
+/user/username/workspace/projects/project/file.ts
 
 Shape signatures in builder refreshed for::
-/a/lib/lib.d.ts (used version)
-/a/b/file.ts (used version)
+/home/src/tslibs/ts/lib/lib.d.ts (used version)
+/user/username/workspace/projects/project/file.ts (used version)
 
 exitCode:: ExitStatus.undefined
 
 Change:: Change file to module
 
 Input::
-//// [/a/b/file.ts]
+//// [/user/username/workspace/projects/project/file.ts]
 function one() {}
 export function two() {
     return function three() {
@@ -97,7 +97,7 @@ Output::
 
 
 
-//// [/a/b/file.js]
+//// [/user/username/workspace/projects/project/file.js]
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.two = two;
@@ -112,7 +112,7 @@ function two() {
 
 
 Program root files: [
-  "/a/b/file.ts"
+  "/user/username/workspace/projects/project/file.ts"
 ]
 Program options: {
   "watch": true,
@@ -120,13 +120,13 @@ Program options: {
 }
 Program structureReused: Completely
 Program files::
-/a/lib/lib.d.ts
-/a/b/file.ts
+/home/src/tslibs/ts/lib/lib.d.ts
+/user/username/workspace/projects/project/file.ts
 
 Semantic diagnostics in builder refreshed for::
-/a/b/file.ts
+/user/username/workspace/projects/project/file.ts
 
 Shape signatures in builder refreshed for::
-/a/b/file.ts (computed .d.ts)
+/user/username/workspace/projects/project/file.ts (computed .d.ts)
 
 exitCode:: ExitStatus.undefined

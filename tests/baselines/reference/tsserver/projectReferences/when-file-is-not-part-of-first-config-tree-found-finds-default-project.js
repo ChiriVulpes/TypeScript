@@ -69,7 +69,7 @@ export let a = 10;
 //// [/home/src/projects/random/tsconfig.json]
 { }
 
-//// [/a/lib/lib.d.ts]
+//// [/home/src/tslibs/ts/lib/lib.d.ts]
 /// <reference no-default-lib="true"/>
 interface Boolean {}
 interface Function {}
@@ -119,7 +119,7 @@ Info seq  [hh:mm:ss:mss] DirectoryWatcher:: Added:: WatchInfo: /home/src/project
 Info seq  [hh:mm:ss:mss] Elapsed:: *ms DirectoryWatcher:: Added:: WatchInfo: /home/src/projects/project/app 1 undefined Config: /home/src/projects/project/app/tsconfig.json WatchType: Wild card directory
 Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: /home/src/projects/project/app/Component.ts 500 undefined WatchType: Closed Script info
 Info seq  [hh:mm:ss:mss] Starting updateGraphWorker: Project: /home/src/projects/project/app/tsconfig.json
-Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: /a/lib/lib.d.ts 500 undefined WatchType: Closed Script info
+Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: /home/src/tslibs/ts/lib/lib.d.ts 500 undefined WatchType: Closed Script info
 Info seq  [hh:mm:ss:mss] DirectoryWatcher:: Added:: WatchInfo: /home/src/projects/project/app/node_modules/@types 1 undefined Project: /home/src/projects/project/app/tsconfig.json WatchType: Type roots
 Info seq  [hh:mm:ss:mss] Elapsed:: *ms DirectoryWatcher:: Added:: WatchInfo: /home/src/projects/project/app/node_modules/@types 1 undefined Project: /home/src/projects/project/app/tsconfig.json WatchType: Type roots
 Info seq  [hh:mm:ss:mss] DirectoryWatcher:: Added:: WatchInfo: /home/src/projects/project/node_modules/@types 1 undefined Project: /home/src/projects/project/app/tsconfig.json WatchType: Type roots
@@ -129,11 +129,11 @@ Info seq  [hh:mm:ss:mss] Elapsed:: *ms DirectoryWatcher:: Added:: WatchInfo: /ho
 Info seq  [hh:mm:ss:mss] Finishing updateGraphWorker: Project: /home/src/projects/project/app/tsconfig.json projectStateVersion: 1 projectProgramVersion: 0 structureChanged: true structureIsReused:: Not Elapsed:: *ms
 Info seq  [hh:mm:ss:mss] Project '/home/src/projects/project/app/tsconfig.json' (Configured)
 Info seq  [hh:mm:ss:mss] 	Files (2)
-	/a/lib/lib.d.ts Text-1 "/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }"
+	/home/src/tslibs/ts/lib/lib.d.ts Text-1 "/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }"
 	/home/src/projects/project/app/Component.ts Text-1 "export const Component = () => {}\n"
 
 
-	../../../../../a/lib/lib.d.ts
+	../../../tslibs/ts/lib/lib.d.ts
 	  Default library for target 'es5'
 	Component.ts
 	  Matched by include pattern '**/*' in 'tsconfig.json'
@@ -271,13 +271,13 @@ Info seq  [hh:mm:ss:mss] Elapsed:: *ms DirectoryWatcher:: Added:: WatchInfo: /ho
 Info seq  [hh:mm:ss:mss] Finishing updateGraphWorker: Project: /home/src/projects/project/tsconfig.json projectStateVersion: 1 projectProgramVersion: 0 structureChanged: true structureIsReused:: Not Elapsed:: *ms
 Info seq  [hh:mm:ss:mss] Project '/home/src/projects/project/tsconfig.json' (Configured)
 Info seq  [hh:mm:ss:mss] 	Files (4)
-	/a/lib/lib.d.ts Text-1 "/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }"
+	/home/src/tslibs/ts/lib/lib.d.ts Text-1 "/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }"
 	/home/src/projects/project/demos/helpers.ts Text-1 "export const foo = 1;\n"
 	/home/src/projects/project/app/Component-demos.ts SVC-1-0 "import * as helpers from 'demos/helpers';\nexport const demo = () => {\n    helpers;\n}\n"
 	/home/src/projects/project/app/Component.ts Text-1 "export const Component = () => {}\n"
 
 
-	../../../../a/lib/lib.d.ts
+	../../tslibs/ts/lib/lib.d.ts
 	  Default library for target 'es5'
 	demos/helpers.ts
 	  Imported via 'demos/helpers' from file 'app/Component-demos.ts'
@@ -372,12 +372,12 @@ Info seq  [hh:mm:ss:mss] Elapsed:: *ms DirectoryWatcher:: Added:: WatchInfo: /ho
 Info seq  [hh:mm:ss:mss] Finishing updateGraphWorker: Project: /home/src/projects/project/demos/tsconfig.json projectStateVersion: 1 projectProgramVersion: 0 structureChanged: true structureIsReused:: Not Elapsed:: *ms
 Info seq  [hh:mm:ss:mss] Project '/home/src/projects/project/demos/tsconfig.json' (Configured)
 Info seq  [hh:mm:ss:mss] 	Files (3)
-	/a/lib/lib.d.ts Text-1 "/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }"
+	/home/src/tslibs/ts/lib/lib.d.ts Text-1 "/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }"
 	/home/src/projects/project/demos/helpers.ts Text-1 "export const foo = 1;\n"
 	/home/src/projects/project/app/Component-demos.ts SVC-1-0 "import * as helpers from 'demos/helpers';\nexport const demo = () => {\n    helpers;\n}\n"
 
 
-	../../../../../a/lib/lib.d.ts
+	../../../tslibs/ts/lib/lib.d.ts
 	  Default library for target 'es5'
 	helpers.ts
 	  Matched by include pattern '**/*' in 'tsconfig.json'
@@ -492,8 +492,6 @@ PolledWatches::
   {"pollingInterval":500}
 
 FsWatches::
-/a/lib/lib.d.ts: *new*
-  {}
 /home/src/projects/project/app/Component.ts: *new*
   {}
 /home/src/projects/project/app/tsconfig.json: *new*
@@ -503,6 +501,8 @@ FsWatches::
 /home/src/projects/project/demos/tsconfig.json: *new*
   {}
 /home/src/projects/project/tsconfig.json: *new*
+  {}
+/home/src/tslibs/ts/lib/lib.d.ts: *new*
   {}
 
 FsWatchesRecursive::
@@ -525,12 +525,6 @@ Projects::
     projectProgramVersion: 1
 
 ScriptInfos::
-/a/lib/lib.d.ts *new*
-    version: Text-1
-    containingProjects: 3
-        /home/src/projects/project/app/tsconfig.json
-        /home/src/projects/project/tsconfig.json
-        /home/src/projects/project/demos/tsconfig.json
 /home/src/projects/project/app/Component-demos.ts (Open) *new*
     version: SVC-1-0
     containingProjects: 2
@@ -544,6 +538,12 @@ ScriptInfos::
 /home/src/projects/project/demos/helpers.ts *new*
     version: Text-1
     containingProjects: 2
+        /home/src/projects/project/tsconfig.json
+        /home/src/projects/project/demos/tsconfig.json
+/home/src/tslibs/ts/lib/lib.d.ts *new*
+    version: Text-1
+    containingProjects: 3
+        /home/src/projects/project/app/tsconfig.json
         /home/src/projects/project/tsconfig.json
         /home/src/projects/project/demos/tsconfig.json
 
@@ -683,11 +683,11 @@ Info seq  [hh:mm:ss:mss] Elapsed:: *ms DirectoryWatcher:: Added:: WatchInfo: /ho
 Info seq  [hh:mm:ss:mss] Finishing updateGraphWorker: Project: /home/src/projects/random/tsconfig.json projectStateVersion: 1 projectProgramVersion: 0 structureChanged: true structureIsReused:: Not Elapsed:: *ms
 Info seq  [hh:mm:ss:mss] Project '/home/src/projects/random/tsconfig.json' (Configured)
 Info seq  [hh:mm:ss:mss] 	Files (2)
-	/a/lib/lib.d.ts Text-1 "/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }"
+	/home/src/tslibs/ts/lib/lib.d.ts Text-1 "/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }"
 	/home/src/projects/random/random.ts SVC-1-0 "export let a = 10;"
 
 
-	../../../../a/lib/lib.d.ts
+	../../tslibs/ts/lib/lib.d.ts
 	  Default library for target 'es5'
 	random.ts
 	  Matched by default include pattern '**/*'
@@ -801,8 +801,6 @@ PolledWatches::
   {"pollingInterval":500}
 
 FsWatches::
-/a/lib/lib.d.ts:
-  {}
 /home/src/projects/project/app/Component.ts:
   {}
 /home/src/projects/project/app/tsconfig.json:
@@ -814,6 +812,8 @@ FsWatches::
 /home/src/projects/project/tsconfig.json:
   {}
 /home/src/projects/random/tsconfig.json: *new*
+  {}
+/home/src/tslibs/ts/lib/lib.d.ts:
   {}
 
 FsWatchesRecursive::
@@ -841,13 +841,6 @@ Projects::
     projectProgramVersion: 1
 
 ScriptInfos::
-/a/lib/lib.d.ts *changed*
-    version: Text-1
-    containingProjects: 4 *changed*
-        /home/src/projects/project/app/tsconfig.json
-        /home/src/projects/project/tsconfig.json
-        /home/src/projects/project/demos/tsconfig.json
-        /home/src/projects/random/tsconfig.json *new*
 /home/src/projects/project/app/Component-demos.ts (Open)
     version: SVC-1-0
     containingProjects: 2
@@ -867,6 +860,13 @@ ScriptInfos::
     version: SVC-1-0
     containingProjects: 1
         /home/src/projects/random/tsconfig.json *default*
+/home/src/tslibs/ts/lib/lib.d.ts *changed*
+    version: Text-1
+    containingProjects: 4 *changed*
+        /home/src/projects/project/app/tsconfig.json
+        /home/src/projects/project/tsconfig.json
+        /home/src/projects/project/demos/tsconfig.json
+        /home/src/projects/random/tsconfig.json *new*
 
 Before request
 
@@ -922,8 +922,6 @@ PolledWatches::
   {"pollingInterval":500}
 
 FsWatches::
-/a/lib/lib.d.ts:
-  {}
 /home/src/projects/project/app/Component.ts:
   {}
 /home/src/projects/project/app/tsconfig.json:
@@ -937,6 +935,8 @@ FsWatches::
 /home/src/projects/random/random.ts: *new*
   {}
 /home/src/projects/random/tsconfig.json:
+  {}
+/home/src/tslibs/ts/lib/lib.d.ts:
   {}
 
 FsWatchesRecursive::
@@ -965,13 +965,6 @@ Projects::
     noOpenRef: true *changed*
 
 ScriptInfos::
-/a/lib/lib.d.ts
-    version: Text-1
-    containingProjects: 4
-        /home/src/projects/project/app/tsconfig.json
-        /home/src/projects/project/tsconfig.json
-        /home/src/projects/project/demos/tsconfig.json
-        /home/src/projects/random/tsconfig.json
 /home/src/projects/project/app/Component-demos.ts (Open)
     version: SVC-1-0
     containingProjects: 2
@@ -991,6 +984,13 @@ ScriptInfos::
     open: false *changed*
     version: SVC-1-0
     containingProjects: 1
+        /home/src/projects/random/tsconfig.json
+/home/src/tslibs/ts/lib/lib.d.ts
+    version: Text-1
+    containingProjects: 4
+        /home/src/projects/project/app/tsconfig.json
+        /home/src/projects/project/tsconfig.json
+        /home/src/projects/project/demos/tsconfig.json
         /home/src/projects/random/tsconfig.json
 
 Info seq  [hh:mm:ss:mss] File: /home/src/projects/project/app/Component-demos.ts:
@@ -1050,8 +1050,6 @@ PolledWatches::
   {"pollingInterval":500}
 
 FsWatches::
-/a/lib/lib.d.ts:
-  {}
 /home/src/projects/project/app/Component-demos.ts: *new*
   {}
 /home/src/projects/project/app/Component.ts:
@@ -1067,6 +1065,8 @@ FsWatches::
 /home/src/projects/random/random.ts:
   {}
 /home/src/projects/random/tsconfig.json:
+  {}
+/home/src/tslibs/ts/lib/lib.d.ts:
   {}
 
 FsWatchesRecursive::
@@ -1098,13 +1098,6 @@ Projects::
     noOpenRef: true
 
 ScriptInfos::
-/a/lib/lib.d.ts
-    version: Text-1
-    containingProjects: 4
-        /home/src/projects/project/app/tsconfig.json
-        /home/src/projects/project/tsconfig.json
-        /home/src/projects/project/demos/tsconfig.json
-        /home/src/projects/random/tsconfig.json
 /home/src/projects/project/app/Component-demos.ts *changed*
     open: false *changed*
     version: SVC-1-0
@@ -1124,6 +1117,13 @@ ScriptInfos::
 /home/src/projects/random/random.ts
     version: SVC-1-0
     containingProjects: 1
+        /home/src/projects/random/tsconfig.json
+/home/src/tslibs/ts/lib/lib.d.ts
+    version: Text-1
+    containingProjects: 4
+        /home/src/projects/project/app/tsconfig.json
+        /home/src/projects/project/tsconfig.json
+        /home/src/projects/project/demos/tsconfig.json
         /home/src/projects/random/tsconfig.json
 
 Info seq  [hh:mm:ss:mss] File: /home/src/projects/project/app/Component-demos.ts:
@@ -1147,11 +1147,11 @@ Info seq  [hh:mm:ss:mss] getConfigFileNameForFile:: File: /home/src/projects/ran
 Info seq  [hh:mm:ss:mss] `remove Project::
 Info seq  [hh:mm:ss:mss] Project '/home/src/projects/project/app/tsconfig.json' (Configured)
 Info seq  [hh:mm:ss:mss] 	Files (2)
-	/a/lib/lib.d.ts
+	/home/src/tslibs/ts/lib/lib.d.ts
 	/home/src/projects/project/app/Component.ts
 
 
-	../../../../../a/lib/lib.d.ts
+	../../../tslibs/ts/lib/lib.d.ts
 	  Default library for target 'es5'
 	Component.ts
 	  Matched by include pattern '**/*' in 'tsconfig.json'
@@ -1166,13 +1166,13 @@ Info seq  [hh:mm:ss:mss] Elapsed:: *ms DirectoryWatcher:: Close:: WatchInfo: /ho
 Info seq  [hh:mm:ss:mss] `remove Project::
 Info seq  [hh:mm:ss:mss] Project '/home/src/projects/project/tsconfig.json' (Configured)
 Info seq  [hh:mm:ss:mss] 	Files (4)
-	/a/lib/lib.d.ts
+	/home/src/tslibs/ts/lib/lib.d.ts
 	/home/src/projects/project/demos/helpers.ts
 	/home/src/projects/project/app/Component-demos.ts
 	/home/src/projects/project/app/Component.ts
 
 
-	../../../../a/lib/lib.d.ts
+	../../tslibs/ts/lib/lib.d.ts
 	  Default library for target 'es5'
 	demos/helpers.ts
 	  Imported via 'demos/helpers' from file 'app/Component-demos.ts'
@@ -1196,12 +1196,12 @@ Info seq  [hh:mm:ss:mss] Elapsed:: *ms DirectoryWatcher:: Close:: WatchInfo: /ho
 Info seq  [hh:mm:ss:mss] `remove Project::
 Info seq  [hh:mm:ss:mss] Project '/home/src/projects/project/demos/tsconfig.json' (Configured)
 Info seq  [hh:mm:ss:mss] 	Files (3)
-	/a/lib/lib.d.ts
+	/home/src/tslibs/ts/lib/lib.d.ts
 	/home/src/projects/project/demos/helpers.ts
 	/home/src/projects/project/app/Component-demos.ts
 
 
-	../../../../../a/lib/lib.d.ts
+	../../../tslibs/ts/lib/lib.d.ts
 	  Default library for target 'es5'
 	helpers.ts
 	  Matched by include pattern '**/*' in 'tsconfig.json'
@@ -1256,9 +1256,9 @@ PolledWatches *deleted*::
   {"pollingInterval":500}
 
 FsWatches::
-/a/lib/lib.d.ts:
-  {}
 /home/src/projects/random/tsconfig.json:
+  {}
+/home/src/tslibs/ts/lib/lib.d.ts:
   {}
 
 FsWatches *deleted*::
@@ -1311,13 +1311,6 @@ Projects::
     noOpenRef: false *changed*
 
 ScriptInfos::
-/a/lib/lib.d.ts *changed*
-    version: Text-1
-    containingProjects: 1 *changed*
-        /home/src/projects/random/tsconfig.json
-        /home/src/projects/project/app/tsconfig.json *deleted*
-        /home/src/projects/project/tsconfig.json *deleted*
-        /home/src/projects/project/demos/tsconfig.json *deleted*
 /home/src/projects/project/app/Component-demos.ts *deleted*
     version: SVC-1-0
     containingProjects: 0 *changed*
@@ -1338,6 +1331,13 @@ ScriptInfos::
     version: SVC-1-0
     containingProjects: 1
         /home/src/projects/random/tsconfig.json *default*
+/home/src/tslibs/ts/lib/lib.d.ts *changed*
+    version: Text-1
+    containingProjects: 1 *changed*
+        /home/src/projects/random/tsconfig.json
+        /home/src/projects/project/app/tsconfig.json *deleted*
+        /home/src/projects/project/tsconfig.json *deleted*
+        /home/src/projects/project/demos/tsconfig.json *deleted*
 
 Before request
 
@@ -1373,11 +1373,11 @@ PolledWatches::
   {"pollingInterval":500}
 
 FsWatches::
-/a/lib/lib.d.ts:
-  {}
 /home/src/projects/random/random.ts: *new*
   {}
 /home/src/projects/random/tsconfig.json:
+  {}
+/home/src/tslibs/ts/lib/lib.d.ts:
   {}
 
 FsWatchesRecursive::
@@ -1391,13 +1391,13 @@ Projects::
     noOpenRef: true *changed*
 
 ScriptInfos::
-/a/lib/lib.d.ts
-    version: Text-1
-    containingProjects: 1
-        /home/src/projects/random/tsconfig.json
 /home/src/projects/random/random.ts *changed*
     open: false *changed*
     version: SVC-1-0
+    containingProjects: 1
+        /home/src/projects/random/tsconfig.json
+/home/src/tslibs/ts/lib/lib.d.ts
+    version: Text-1
     containingProjects: 1
         /home/src/projects/random/tsconfig.json
 

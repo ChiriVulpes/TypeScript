@@ -9,7 +9,7 @@ import { E1 } from "./file1"; export const enum E2 { V = E1.V }
 //// [/user/someone/projects/myproject/file3.ts]
 import { E2 } from "./file2"; const v: E2 = E2.V;
 
-//// [/a/lib/lib.d.ts]
+//// [/home/src/tslibs/ts/lib/lib.d.ts]
 /// <reference no-default-lib="true"/>
 interface Boolean {}
 interface Function {}
@@ -23,7 +23,7 @@ interface String { charAt: any; }
 interface Array<T> { length: number; [n: number]: T; }
 
 
-/a/lib/tsc.js -w /user/someone/projects/myproject/file3.ts
+/home/src/tslibs/ts/lib/tsc.js -w /user/someone/projects/myproject/file3.ts
 Output::
 >> Screen clear
 [[90mHH:MM:SS AM[0m] Starting compilation in watch mode...
@@ -50,7 +50,7 @@ var v = 1 /* E2.V */;
 
 
 FsWatches::
-/a/lib/lib.d.ts: *new*
+/home/src/tslibs/ts/lib/lib.d.ts: *new*
   {}
 /user/someone/projects/myproject/file1.ts: *new*
   {}
@@ -67,19 +67,19 @@ Program options: {
 }
 Program structureReused: Not
 Program files::
-/a/lib/lib.d.ts
+/home/src/tslibs/ts/lib/lib.d.ts
 /user/someone/projects/myproject/file1.ts
 /user/someone/projects/myproject/file2.ts
 /user/someone/projects/myproject/file3.ts
 
 Semantic diagnostics in builder refreshed for::
-/a/lib/lib.d.ts
+/home/src/tslibs/ts/lib/lib.d.ts
 /user/someone/projects/myproject/file1.ts
 /user/someone/projects/myproject/file2.ts
 /user/someone/projects/myproject/file3.ts
 
 Shape signatures in builder refreshed for::
-/a/lib/lib.d.ts (used version)
+/home/src/tslibs/ts/lib/lib.d.ts (used version)
 /user/someone/projects/myproject/file1.ts (used version)
 /user/someone/projects/myproject/file2.ts (used version)
 /user/someone/projects/myproject/file3.ts (used version)
@@ -126,7 +126,7 @@ Program options: {
 }
 Program structureReused: Completely
 Program files::
-/a/lib/lib.d.ts
+/home/src/tslibs/ts/lib/lib.d.ts
 /user/someone/projects/myproject/file1.ts
 /user/someone/projects/myproject/file2.ts
 /user/someone/projects/myproject/file3.ts

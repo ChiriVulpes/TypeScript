@@ -14,7 +14,7 @@ import { b } from "c://project/a"
 a;b;
 
 
-//// [C:/a/lib/lib.d.ts]
+//// [C:/home/src/tslibs/ts/lib/lib.d.ts]
 /// <reference no-default-lib="true"/>
 interface Boolean {}
 interface Function {}
@@ -35,12 +35,12 @@ interface Array<T> { length: number; [n: number]: T; }
 }
 
 
-C:/a/lib/tsc.js --w --p C://project --explainFiles
+C:/home/src/tslibs/ts/lib/tsc.js --w --p C://project --explainFiles
 Output::
 >> Screen clear
 [[90mHH:MM:SS AM[0m] Starting compilation in watch mode...
 
-a/lib/lib.d.ts
+home/src/tslibs/ts/lib/lib.d.ts
   Default library for target 'es5'
 project/a.ts
   Matched by default include pattern '**/*'
@@ -75,7 +75,7 @@ C:/project/node_modules/@types: *new*
   {"pollingInterval":500}
 
 FsWatches::
-C:/a/lib/lib.d.ts: *new*
+C:/home/src/tslibs/ts/lib/lib.d.ts: *new*
   {}
 C:/project/a.ts: *new*
   {}
@@ -101,17 +101,17 @@ Program options: {
 }
 Program structureReused: Not
 Program files::
-C:/a/lib/lib.d.ts
+C:/home/src/tslibs/ts/lib/lib.d.ts
 C:/project/a.ts
 C:/project/b.ts
 
 Semantic diagnostics in builder refreshed for::
-C:/a/lib/lib.d.ts
+C:/home/src/tslibs/ts/lib/lib.d.ts
 C:/project/a.ts
 C:/project/b.ts
 
 Shape signatures in builder refreshed for::
-c:/a/lib/lib.d.ts (used version)
+c:/home/src/tslibs/ts/lib/lib.d.ts (used version)
 c:/project/a.ts (used version)
 c:/project/b.ts (used version)
 
@@ -140,7 +140,7 @@ Output::
 >> Screen clear
 [[90mHH:MM:SS AM[0m] File change detected. Starting incremental compilation...
 
-a/lib/lib.d.ts
+home/src/tslibs/ts/lib/lib.d.ts
   Default library for target 'es5'
 project/a.ts
   Matched by default include pattern '**/*'
@@ -177,7 +177,7 @@ Program options: {
 }
 Program structureReused: Completely
 Program files::
-C:/a/lib/lib.d.ts
+C:/home/src/tslibs/ts/lib/lib.d.ts
 C:/project/a.ts
 C:/project/b.ts
 

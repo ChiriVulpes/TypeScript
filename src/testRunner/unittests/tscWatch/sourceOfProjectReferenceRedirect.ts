@@ -16,7 +16,7 @@ import {
     SymLink,
 } from "../helpers/virtualFileSystemWithWatch.js";
 
-describe("unittests:: tsc-watch:: watchAPI:: with sourceOfProjectReferenceRedirect", () => {
+describe("unittests:: tscWatch:: watchAPI:: with sourceOfProjectReferenceRedirect::", () => {
     interface VerifyWatchInput {
         files: FsContents | readonly FileOrFolderOrSymLink[];
         config: string;

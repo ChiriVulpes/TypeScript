@@ -8,11 +8,12 @@ import {
 import {
     createWatchedSystem,
     File,
+    getTypeScriptLibTestLocation,
     libFile,
     SymLink,
 } from "../helpers/virtualFileSystemWithWatch.js";
 
-describe("unittests:: tsc-watch:: forceConsistentCasingInFileNames::", () => {
+describe("unittests:: tscWatch:: forceConsistentCasingInFileNames::", () => {
     const loggerFile: File = {
         path: `/user/username/projects/myproject/logger.ts`,
         content: `export class logger { }`,
@@ -350,7 +351,7 @@ a;b;
                         traceResolution: true,
                     },
                 }),
-                "/a/lib/lib.esnext.full.d.ts": libFile.content,
+                [getTypeScriptLibTestLocation("esnext.full")]: libFile.content,
             }, { currentDirectory: "/Users/name/projects/web" }),
     });
 
@@ -380,7 +381,7 @@ a;b;
                         traceResolution: true,
                     },
                 }),
-                "/a/lib/lib.es2021.full.d.ts": libFile.content,
+                [getTypeScriptLibTestLocation("es2021.full")]: libFile.content,
             }, { currentDirectory: "/Users/name/projects/lib-boilerplate" }),
     });
 

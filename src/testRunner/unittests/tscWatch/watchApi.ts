@@ -22,7 +22,7 @@ import {
     libFile,
 } from "../helpers/virtualFileSystemWithWatch.js";
 
-describe("unittests:: tsc-watch:: watchAPI:: tsc-watch with custom module resolution", () => {
+describe("unittests:: tscWatch:: watchAPI:: tsc-watch with custom module resolution", () => {
     it("verify that module resolution with json extension works when returned without extension", () => {
         const configFileJson: any = {
             compilerOptions: { module: "commonjs", resolveJsonModule: true },
@@ -129,7 +129,7 @@ describe("unittests:: tsc-watch:: watchAPI:: tsc-watch with custom module resolu
     });
 });
 
-describe("unittests:: tsc-watch:: watchAPI:: tsc-watch expose error count to watch status reporter", () => {
+describe("unittests:: tscWatch:: watchAPI:: tsc-watch expose error count to watch status reporter", () => {
     it("verify that the error count is correctly passed down to the watch status reporter", () => {
         const config: File = {
             path: `/user/username/projects/myproject/tsconfig.json`,
@@ -171,7 +171,7 @@ describe("unittests:: tsc-watch:: watchAPI:: tsc-watch expose error count to wat
     });
 });
 
-describe("unittests:: tsc-watch:: watchAPI:: when watchHost does not implement setTimeout or clearTimeout", () => {
+describe("unittests:: tscWatch:: watchAPI:: when watchHost does not implement setTimeout or clearTimeout", () => {
     it("verifies that getProgram gets updated program if new file is added to the program", () => {
         const config: File = {
             path: `/user/username/projects/myproject/tsconfig.json`,
@@ -209,7 +209,7 @@ describe("unittests:: tsc-watch:: watchAPI:: when watchHost does not implement s
     });
 });
 
-describe("unittests:: tsc-watch:: watchAPI:: when watchHost can add extraFileExtensions to process", () => {
+describe("unittests:: tscWatch:: watchAPI:: when watchHost can add extraFileExtensions to process", () => {
     it("verifies that extraFileExtensions are supported to get the program with other extensions", () => {
         const config: File = {
             path: `/user/username/projects/myproject/tsconfig.json`,
@@ -251,7 +251,7 @@ describe("unittests:: tsc-watch:: watchAPI:: when watchHost can add extraFileExt
     });
 });
 
-describe("unittests:: tsc-watch:: watchAPI:: when watchHost uses createSemanticDiagnosticsBuilderProgram", () => {
+describe("unittests:: tscWatch:: watchAPI:: when watchHost uses createSemanticDiagnosticsBuilderProgram", () => {
     function createSystem(configText: string, mainText: string) {
         const config: File = {
             path: `/user/username/projects/myproject/tsconfig.json`,
@@ -497,7 +497,7 @@ describe("unittests:: tsc-watch:: watchAPI:: when watchHost uses createSemanticD
     verify({ outFile: "../outFile.js", module: ts.ModuleKind.AMD });
 });
 
-describe("unittests:: tsc-watch:: watchAPI:: when getParsedCommandLine is implemented", () => {
+describe("unittests:: tscWatch:: watchAPI:: when getParsedCommandLine is implemented", () => {
     function setup(useSourceOfProjectReferenceRedirect?: () => boolean) {
         const config1: File = {
             path: `/user/username/projects/myproject/projects/project1/tsconfig.json`,
@@ -633,7 +633,7 @@ describe("unittests:: tsc-watch:: watchAPI:: when getParsedCommandLine is implem
     });
 });
 
-describe("unittests:: tsc-watch:: watchAPI:: when builder emit occurs with emitOnlyDtsFiles", () => {
+describe("unittests:: tscWatch:: watchAPI:: when builder emit occurs with emitOnlyDtsFiles", () => {
     function verify(subScenario: string, outFile?: string) {
         it(subScenario, () => {
             const system = createWatchedSystem({
@@ -726,7 +726,7 @@ describe("unittests:: tsc-watch:: watchAPI:: when builder emit occurs with emitO
     verify("outFile/when emitting with emitOnlyDtsFiles", "outFile.js");
 });
 
-describe("unittests:: tsc-watch:: watchAPI:: when creating program with project references but not config file", () => {
+describe("unittests:: tscWatch:: watchAPI:: when creating program with project references but not config file", () => {
     function setup(libExtends: boolean) {
         const system = createWatchedSystem({
             "/user/username/projects/project/tsconfig.json": jsonToReadableText({

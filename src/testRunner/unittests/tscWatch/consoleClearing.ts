@@ -13,10 +13,10 @@ import {
     libFile,
 } from "../helpers/virtualFileSystemWithWatch.js";
 
-describe("unittests:: tsc-watch:: console clearing", () => {
+describe("unittests:: tscWatch:: consoleClearing::", () => {
     const scenario = "consoleClearing";
     const file: File = {
-        path: "/f.ts",
+        path: "/user/username/projects/myproject/f.ts",
         content: "",
     };
 
@@ -46,7 +46,7 @@ describe("unittests:: tsc-watch:: console clearing", () => {
             preserveWatchOutput: true,
         };
         const configFile: File = {
-            path: "/tsconfig.json",
+            path: "/user/username/projects/myproject/tsconfig.json",
             content: jsonToReadableText({ compilerOptions }),
         };
         const files = [file, configFile, libFile];

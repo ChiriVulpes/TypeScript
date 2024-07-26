@@ -6,7 +6,7 @@ import {
 import { verifyTscWatch } from "../helpers/tscWatch.js";
 import { createWatchedSystem } from "../helpers/virtualFileSystemWithWatch.js";
 
-describe("unittests:: tsc-watch:: extends::", () => {
+describe("unittests:: tscWatch:: extends::", () => {
     verifyTscWatch({
         scenario: "extends",
         subScenario: "resolves the symlink path",

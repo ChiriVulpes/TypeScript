@@ -19,10 +19,11 @@ import {
 import {
     createServerHost,
     File,
+    getTypeScriptLibTestLocation,
     libFile,
 } from "../helpers/virtualFileSystemWithWatch.js";
 
-describe("unittests:: tsserver:: moduleResolution", () => {
+describe("unittests:: tsserver:: moduleResolution::", () => {
     describe("package json file is edited", () => {
         function setup(packageFileContents: string) {
             const configFile: File = {
@@ -54,7 +55,13 @@ describe("unittests:: tsserver:: moduleResolution", () => {
                         }
                     `,
             };
-            const host = createServerHost([configFile, fileA, fileB, packageFile, { ...libFile, path: "/a/lib/lib.es2016.full.d.ts" }]);
+            const host = createServerHost([
+                configFile,
+                fileA,
+                fileB,
+                packageFile,
+                { ...libFile, path: getTypeScriptLibTestLocation("es2016.full") },
+            ]);
             const session = new TestSession(host);
             openFilesForSession([fileA], session);
             return {
@@ -224,7 +231,7 @@ describe("unittests:: tsserver:: moduleResolution", () => {
                 "/home/src/projects/project/packages/package-b/src/index.ts": indexContent,
                 "/home/src/projects/project/node_modules/package-a": { symLink: "/home/src/projects/project/packages/package-a" },
                 "/home/src/projects/project/node_modules/package-b": { symLink: "/home/src/projects/project/packages/package-b" },
-                "/a/lib/lib.es2021.d.ts": libContent,
+                [getTypeScriptLibTestLocation("es2021")]: libContent,
             }, { currentDirectory: "/home/src/projects/project" });
             if (built) {
                 solutionBuildWithBaseline(host, ["packages/package-b"]);

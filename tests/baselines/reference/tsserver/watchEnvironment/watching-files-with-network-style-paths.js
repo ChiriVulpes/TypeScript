@@ -2,7 +2,7 @@ Info seq  [hh:mm:ss:mss] For files of style c:/myprojects/project/x.js
 currentDirectory:: c:/ useCaseSensitiveFileNames: false
 Info seq  [hh:mm:ss:mss] Provided types map file "/typesMap.json" doesn't exist
 Before request
-//// [c:/a/lib/lib.d.ts]
+//// [c:/home/src/tslibs/ts/lib/lib.d.ts]
 /// <reference no-default-lib="true"/>
 interface Boolean {}
 interface Function {}
@@ -32,7 +32,7 @@ Info seq  [hh:mm:ss:mss] getConfigFileNameForFile:: File: c:/myprojects/project/
 Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: c:/myprojects/project/tsconfig.json 2000 undefined WatchType: Config file for the inferred project root
 Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: c:/myprojects/project/jsconfig.json 2000 undefined WatchType: Config file for the inferred project root
 Info seq  [hh:mm:ss:mss] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
-Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: c:/a/lib/lib.d.ts 500 undefined WatchType: Closed Script info
+Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: c:/home/src/tslibs/ts/lib/lib.d.ts 500 undefined WatchType: Closed Script info
 Info seq  [hh:mm:ss:mss] DirectoryWatcher:: Added:: WatchInfo: c:/myprojects/project/node_modules/@types 1 undefined Project: /dev/null/inferredProject1* WatchType: Type roots
 Info seq  [hh:mm:ss:mss] Elapsed:: *ms DirectoryWatcher:: Added:: WatchInfo: c:/myprojects/project/node_modules/@types 1 undefined Project: /dev/null/inferredProject1* WatchType: Type roots
 Info seq  [hh:mm:ss:mss] DirectoryWatcher:: Added:: WatchInfo: c:/myprojects/node_modules/@types 1 undefined Project: /dev/null/inferredProject1* WatchType: Type roots
@@ -40,11 +40,11 @@ Info seq  [hh:mm:ss:mss] Elapsed:: *ms DirectoryWatcher:: Added:: WatchInfo: c:/
 Info seq  [hh:mm:ss:mss] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* projectStateVersion: 1 projectProgramVersion: 0 structureChanged: true structureIsReused:: Not Elapsed:: *ms
 Info seq  [hh:mm:ss:mss] Project '/dev/null/inferredProject1*' (Inferred)
 Info seq  [hh:mm:ss:mss] 	Files (2)
-	c:/a/lib/lib.d.ts Text-1 "/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }"
+	c:/home/src/tslibs/ts/lib/lib.d.ts Text-1 "/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }"
 	c:/myprojects/project/x.js SVC-1-0 "const x = 10"
 
 
-	../../a/lib/lib.d.ts
+	../../home/src/tslibs/ts/lib/lib.d.ts
 	  Default library for target 'es5'
 	x.js
 	  Root file specified for compilation
@@ -63,7 +63,7 @@ c:/myprojects/project/tsconfig.json: *new*
   {"pollingInterval":2000}
 
 FsWatches::
-c:/a/lib/lib.d.ts: *new*
+c:/home/src/tslibs/ts/lib/lib.d.ts: *new*
   {}
 
 Projects::
@@ -72,7 +72,7 @@ Projects::
     projectProgramVersion: 0
 
 ScriptInfos::
-c:/a/lib/lib.d.ts *new*
+c:/home/src/tslibs/ts/lib/lib.d.ts *new*
     version: Text-1
     containingProjects: 1
         /dev/null/inferredProject1*
@@ -81,20 +81,20 @@ c:/myprojects/project/x.js (Open) *new*
     containingProjects: 1
         /dev/null/inferredProject1* *default*
 
-TI:: [hh:mm:ss:mss] Global cache location 'c:/a/data', safe file path '/safeList.json', types map path /typesMap.json
-TI:: [hh:mm:ss:mss] Processing cache location 'c:/a/data'
-TI:: [hh:mm:ss:mss] Trying to find 'c:/a/data/package.json'...
-TI:: [hh:mm:ss:mss] Finished processing cache location 'c:/a/data'
-TI:: [hh:mm:ss:mss] Npm config file: c:/a/data/package.json
-TI:: [hh:mm:ss:mss] Npm config file: 'c:/a/data/package.json' is missing, creating new one...
+TI:: [hh:mm:ss:mss] Global cache location 'c:/home/src/projects/globalcache/data', safe file path '/safeList.json', types map path /typesMap.json
+TI:: [hh:mm:ss:mss] Processing cache location 'c:/home/src/projects/globalcache/data'
+TI:: [hh:mm:ss:mss] Trying to find 'c:/home/src/projects/globalcache/data/package.json'...
+TI:: [hh:mm:ss:mss] Finished processing cache location 'c:/home/src/projects/globalcache/data'
+TI:: [hh:mm:ss:mss] Npm config file: c:/home/src/projects/globalcache/data/package.json
+TI:: [hh:mm:ss:mss] Npm config file: 'c:/home/src/projects/globalcache/data/package.json' is missing, creating new one...
 TI:: [hh:mm:ss:mss] Updating types-registry npm package...
 TI:: [hh:mm:ss:mss] npm install --ignore-scripts types-registry@latest
 TI:: [hh:mm:ss:mss] Updated types-registry npm package
 TI:: typing installer creation complete
-//// [c:/a/data/package.json]
+//// [c:/home/src/projects/globalcache/data/package.json]
 { "private": true }
 
-//// [c:/a/data/node_modules/types-registry/index.json]
+//// [c:/home/src/projects/globalcache/data/node_modules/types-registry/index.json]
 {
   "entries": {}
 }
@@ -104,7 +104,7 @@ TI:: [hh:mm:ss:mss] Got install request
     {
       "projectName": "/dev/null/inferredProject1*",
       "fileNames": [
-        "c:/a/lib/lib.d.ts",
+        "c:/home/src/tslibs/ts/lib/lib.d.ts",
         "c:/myprojects/project/x.js"
       ],
       "compilerOptions": {
@@ -230,7 +230,7 @@ c:/myprojects/project/tsconfig.json:
   {"pollingInterval":2000}
 
 FsWatches::
-c:/a/lib/lib.d.ts:
+c:/home/src/tslibs/ts/lib/lib.d.ts:
   {}
 
 Projects::
@@ -242,7 +242,7 @@ Info seq  [hh:mm:ss:mss] For files of style //vda1cs4850/myprojects/project/x.js
 currentDirectory:: //vda1cs4850/ useCaseSensitiveFileNames: false
 Info seq  [hh:mm:ss:mss] Provided types map file "/typesMap.json" doesn't exist
 Before request
-//// [//vda1cs4850/a/lib/lib.d.ts]
+//// [//vda1cs4850/home/src/tslibs/ts/lib/lib.d.ts]
 /// <reference no-default-lib="true"/>
 interface Boolean {}
 interface Function {}
@@ -270,15 +270,15 @@ Info seq  [hh:mm:ss:mss] request:
     }
 Info seq  [hh:mm:ss:mss] getConfigFileNameForFile:: File: //vda1cs4850/myprojects/project/x.js ProjectRootPath: undefined:: Result: undefined
 Info seq  [hh:mm:ss:mss] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
-Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: //vda1cs4850/a/lib/lib.d.ts 500 undefined WatchType: Closed Script info
+Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: //vda1cs4850/home/src/tslibs/ts/lib/lib.d.ts 500 undefined WatchType: Closed Script info
 Info seq  [hh:mm:ss:mss] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* projectStateVersion: 1 projectProgramVersion: 0 structureChanged: true structureIsReused:: Not Elapsed:: *ms
 Info seq  [hh:mm:ss:mss] Project '/dev/null/inferredProject1*' (Inferred)
 Info seq  [hh:mm:ss:mss] 	Files (2)
-	//vda1cs4850/a/lib/lib.d.ts Text-1 "/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }"
+	//vda1cs4850/home/src/tslibs/ts/lib/lib.d.ts Text-1 "/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }"
 	//vda1cs4850/myprojects/project/x.js SVC-1-0 ""
 
 
-	../../a/lib/lib.d.ts
+	../../home/src/tslibs/ts/lib/lib.d.ts
 	  Default library for target 'es5'
 	x.js
 	  Root file specified for compilation
@@ -287,7 +287,7 @@ Info seq  [hh:mm:ss:mss] -----------------------------------------------
 TI:: Creating typing installer
 
 FsWatches::
-//vda1cs4850/a/lib/lib.d.ts: *new*
+//vda1cs4850/home/src/tslibs/ts/lib/lib.d.ts: *new*
   {}
 
 Projects::
@@ -296,7 +296,7 @@ Projects::
     projectProgramVersion: 0
 
 ScriptInfos::
-//vda1cs4850/a/lib/lib.d.ts *new*
+//vda1cs4850/home/src/tslibs/ts/lib/lib.d.ts *new*
     version: Text-1
     containingProjects: 1
         /dev/null/inferredProject1*
@@ -305,20 +305,20 @@ ScriptInfos::
     containingProjects: 1
         /dev/null/inferredProject1* *default*
 
-TI:: [hh:mm:ss:mss] Global cache location '//vda1cs4850/a/data', safe file path '/safeList.json', types map path /typesMap.json
-TI:: [hh:mm:ss:mss] Processing cache location '//vda1cs4850/a/data'
-TI:: [hh:mm:ss:mss] Trying to find '//vda1cs4850/a/data/package.json'...
-TI:: [hh:mm:ss:mss] Finished processing cache location '//vda1cs4850/a/data'
-TI:: [hh:mm:ss:mss] Npm config file: //vda1cs4850/a/data/package.json
-TI:: [hh:mm:ss:mss] Npm config file: '//vda1cs4850/a/data/package.json' is missing, creating new one...
+TI:: [hh:mm:ss:mss] Global cache location '//vda1cs4850/home/src/projects/globalcache/data', safe file path '/safeList.json', types map path /typesMap.json
+TI:: [hh:mm:ss:mss] Processing cache location '//vda1cs4850/home/src/projects/globalcache/data'
+TI:: [hh:mm:ss:mss] Trying to find '//vda1cs4850/home/src/projects/globalcache/data/package.json'...
+TI:: [hh:mm:ss:mss] Finished processing cache location '//vda1cs4850/home/src/projects/globalcache/data'
+TI:: [hh:mm:ss:mss] Npm config file: //vda1cs4850/home/src/projects/globalcache/data/package.json
+TI:: [hh:mm:ss:mss] Npm config file: '//vda1cs4850/home/src/projects/globalcache/data/package.json' is missing, creating new one...
 TI:: [hh:mm:ss:mss] Updating types-registry npm package...
 TI:: [hh:mm:ss:mss] npm install --ignore-scripts types-registry@latest
 TI:: [hh:mm:ss:mss] Updated types-registry npm package
 TI:: typing installer creation complete
-//// [//vda1cs4850/a/data/package.json]
+//// [//vda1cs4850/home/src/projects/globalcache/data/package.json]
 { "private": true }
 
-//// [//vda1cs4850/a/data/node_modules/types-registry/index.json]
+//// [//vda1cs4850/home/src/projects/globalcache/data/node_modules/types-registry/index.json]
 {
   "entries": {}
 }
@@ -328,7 +328,7 @@ TI:: [hh:mm:ss:mss] Got install request
     {
       "projectName": "/dev/null/inferredProject1*",
       "fileNames": [
-        "//vda1cs4850/a/lib/lib.d.ts",
+        "//vda1cs4850/home/src/tslibs/ts/lib/lib.d.ts",
         "//vda1cs4850/myprojects/project/x.js"
       ],
       "compilerOptions": {
@@ -446,7 +446,7 @@ PolledWatches::
   {"pollingInterval":500}
 
 FsWatches::
-//vda1cs4850/a/lib/lib.d.ts:
+//vda1cs4850/home/src/tslibs/ts/lib/lib.d.ts:
   {}
 
 Projects::
@@ -458,7 +458,7 @@ Info seq  [hh:mm:ss:mss] For files of style //vda1cs4850/c$/myprojects/project/x
 currentDirectory:: //vda1cs4850/ useCaseSensitiveFileNames: false
 Info seq  [hh:mm:ss:mss] Provided types map file "/typesMap.json" doesn't exist
 Before request
-//// [//vda1cs4850/a/lib/lib.d.ts]
+//// [//vda1cs4850/home/src/tslibs/ts/lib/lib.d.ts]
 /// <reference no-default-lib="true"/>
 interface Boolean {}
 interface Function {}
@@ -488,7 +488,7 @@ Info seq  [hh:mm:ss:mss] getConfigFileNameForFile:: File: //vda1cs4850/c$/myproj
 Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: //vda1cs4850/c$/myprojects/project/tsconfig.json 2000 undefined WatchType: Config file for the inferred project root
 Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: //vda1cs4850/c$/myprojects/project/jsconfig.json 2000 undefined WatchType: Config file for the inferred project root
 Info seq  [hh:mm:ss:mss] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
-Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: //vda1cs4850/a/lib/lib.d.ts 500 undefined WatchType: Closed Script info
+Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: //vda1cs4850/home/src/tslibs/ts/lib/lib.d.ts 500 undefined WatchType: Closed Script info
 Info seq  [hh:mm:ss:mss] DirectoryWatcher:: Added:: WatchInfo: //vda1cs4850/c$/myprojects/project/node_modules/@types 1 undefined Project: /dev/null/inferredProject1* WatchType: Type roots
 Info seq  [hh:mm:ss:mss] Elapsed:: *ms DirectoryWatcher:: Added:: WatchInfo: //vda1cs4850/c$/myprojects/project/node_modules/@types 1 undefined Project: /dev/null/inferredProject1* WatchType: Type roots
 Info seq  [hh:mm:ss:mss] DirectoryWatcher:: Added:: WatchInfo: //vda1cs4850/c$/myprojects/node_modules/@types 1 undefined Project: /dev/null/inferredProject1* WatchType: Type roots
@@ -496,11 +496,11 @@ Info seq  [hh:mm:ss:mss] Elapsed:: *ms DirectoryWatcher:: Added:: WatchInfo: //v
 Info seq  [hh:mm:ss:mss] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* projectStateVersion: 1 projectProgramVersion: 0 structureChanged: true structureIsReused:: Not Elapsed:: *ms
 Info seq  [hh:mm:ss:mss] Project '/dev/null/inferredProject1*' (Inferred)
 Info seq  [hh:mm:ss:mss] 	Files (2)
-	//vda1cs4850/a/lib/lib.d.ts Text-1 "/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }"
+	//vda1cs4850/home/src/tslibs/ts/lib/lib.d.ts Text-1 "/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }"
 	//vda1cs4850/c$/myprojects/project/x.js SVC-1-0 ""
 
 
-	../../../a/lib/lib.d.ts
+	../../../home/src/tslibs/ts/lib/lib.d.ts
 	  Default library for target 'es5'
 	x.js
 	  Root file specified for compilation
@@ -519,7 +519,7 @@ PolledWatches::
   {"pollingInterval":2000}
 
 FsWatches::
-//vda1cs4850/a/lib/lib.d.ts: *new*
+//vda1cs4850/home/src/tslibs/ts/lib/lib.d.ts: *new*
   {}
 
 Projects::
@@ -528,29 +528,29 @@ Projects::
     projectProgramVersion: 0
 
 ScriptInfos::
-//vda1cs4850/a/lib/lib.d.ts *new*
-    version: Text-1
-    containingProjects: 1
-        /dev/null/inferredProject1*
 //vda1cs4850/c$/myprojects/project/x.js (Open) *new*
     version: SVC-1-0
     containingProjects: 1
         /dev/null/inferredProject1* *default*
+//vda1cs4850/home/src/tslibs/ts/lib/lib.d.ts *new*
+    version: Text-1
+    containingProjects: 1
+        /dev/null/inferredProject1*
 
-TI:: [hh:mm:ss:mss] Global cache location '//vda1cs4850/a/data', safe file path '/safeList.json', types map path /typesMap.json
-TI:: [hh:mm:ss:mss] Processing cache location '//vda1cs4850/a/data'
-TI:: [hh:mm:ss:mss] Trying to find '//vda1cs4850/a/data/package.json'...
-TI:: [hh:mm:ss:mss] Finished processing cache location '//vda1cs4850/a/data'
-TI:: [hh:mm:ss:mss] Npm config file: //vda1cs4850/a/data/package.json
-TI:: [hh:mm:ss:mss] Npm config file: '//vda1cs4850/a/data/package.json' is missing, creating new one...
+TI:: [hh:mm:ss:mss] Global cache location '//vda1cs4850/home/src/projects/globalcache/data', safe file path '/safeList.json', types map path /typesMap.json
+TI:: [hh:mm:ss:mss] Processing cache location '//vda1cs4850/home/src/projects/globalcache/data'
+TI:: [hh:mm:ss:mss] Trying to find '//vda1cs4850/home/src/projects/globalcache/data/package.json'...
+TI:: [hh:mm:ss:mss] Finished processing cache location '//vda1cs4850/home/src/projects/globalcache/data'
+TI:: [hh:mm:ss:mss] Npm config file: //vda1cs4850/home/src/projects/globalcache/data/package.json
+TI:: [hh:mm:ss:mss] Npm config file: '//vda1cs4850/home/src/projects/globalcache/data/package.json' is missing, creating new one...
 TI:: [hh:mm:ss:mss] Updating types-registry npm package...
 TI:: [hh:mm:ss:mss] npm install --ignore-scripts types-registry@latest
 TI:: [hh:mm:ss:mss] Updated types-registry npm package
 TI:: typing installer creation complete
-//// [//vda1cs4850/a/data/package.json]
+//// [//vda1cs4850/home/src/projects/globalcache/data/package.json]
 { "private": true }
 
-//// [//vda1cs4850/a/data/node_modules/types-registry/index.json]
+//// [//vda1cs4850/home/src/projects/globalcache/data/node_modules/types-registry/index.json]
 {
   "entries": {}
 }
@@ -560,7 +560,7 @@ TI:: [hh:mm:ss:mss] Got install request
     {
       "projectName": "/dev/null/inferredProject1*",
       "fileNames": [
-        "//vda1cs4850/a/lib/lib.d.ts",
+        "//vda1cs4850/home/src/tslibs/ts/lib/lib.d.ts",
         "//vda1cs4850/c$/myprojects/project/x.js"
       ],
       "compilerOptions": {
@@ -686,7 +686,7 @@ PolledWatches::
   {"pollingInterval":2000}
 
 FsWatches::
-//vda1cs4850/a/lib/lib.d.ts:
+//vda1cs4850/home/src/tslibs/ts/lib/lib.d.ts:
   {}
 
 Projects::
@@ -698,7 +698,7 @@ Info seq  [hh:mm:ss:mss] For files of style c:/users/username/myprojects/project
 currentDirectory:: c:/ useCaseSensitiveFileNames: false
 Info seq  [hh:mm:ss:mss] Provided types map file "/typesMap.json" doesn't exist
 Before request
-//// [c:/a/lib/lib.d.ts]
+//// [c:/home/src/tslibs/ts/lib/lib.d.ts]
 /// <reference no-default-lib="true"/>
 interface Boolean {}
 interface Function {}
@@ -728,7 +728,7 @@ Info seq  [hh:mm:ss:mss] getConfigFileNameForFile:: File: c:/users/username/mypr
 Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: c:/users/username/myprojects/project/tsconfig.json 2000 undefined WatchType: Config file for the inferred project root
 Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: c:/users/username/myprojects/project/jsconfig.json 2000 undefined WatchType: Config file for the inferred project root
 Info seq  [hh:mm:ss:mss] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
-Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: c:/a/lib/lib.d.ts 500 undefined WatchType: Closed Script info
+Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: c:/home/src/tslibs/ts/lib/lib.d.ts 500 undefined WatchType: Closed Script info
 Info seq  [hh:mm:ss:mss] DirectoryWatcher:: Added:: WatchInfo: c:/users/username/myprojects/project/node_modules/@types 1 undefined Project: /dev/null/inferredProject1* WatchType: Type roots
 Info seq  [hh:mm:ss:mss] Elapsed:: *ms DirectoryWatcher:: Added:: WatchInfo: c:/users/username/myprojects/project/node_modules/@types 1 undefined Project: /dev/null/inferredProject1* WatchType: Type roots
 Info seq  [hh:mm:ss:mss] DirectoryWatcher:: Added:: WatchInfo: c:/users/username/myprojects/node_modules/@types 1 undefined Project: /dev/null/inferredProject1* WatchType: Type roots
@@ -736,11 +736,11 @@ Info seq  [hh:mm:ss:mss] Elapsed:: *ms DirectoryWatcher:: Added:: WatchInfo: c:/
 Info seq  [hh:mm:ss:mss] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* projectStateVersion: 1 projectProgramVersion: 0 structureChanged: true structureIsReused:: Not Elapsed:: *ms
 Info seq  [hh:mm:ss:mss] Project '/dev/null/inferredProject1*' (Inferred)
 Info seq  [hh:mm:ss:mss] 	Files (2)
-	c:/a/lib/lib.d.ts Text-1 "/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }"
+	c:/home/src/tslibs/ts/lib/lib.d.ts Text-1 "/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }"
 	c:/users/username/myprojects/project/x.js SVC-1-0 "const x = 10"
 
 
-	../../../../a/lib/lib.d.ts
+	../../../../home/src/tslibs/ts/lib/lib.d.ts
 	  Default library for target 'es5'
 	x.js
 	  Root file specified for compilation
@@ -759,7 +759,7 @@ c:/users/username/myprojects/project/tsconfig.json: *new*
   {"pollingInterval":2000}
 
 FsWatches::
-c:/a/lib/lib.d.ts: *new*
+c:/home/src/tslibs/ts/lib/lib.d.ts: *new*
   {}
 
 Projects::
@@ -768,7 +768,7 @@ Projects::
     projectProgramVersion: 0
 
 ScriptInfos::
-c:/a/lib/lib.d.ts *new*
+c:/home/src/tslibs/ts/lib/lib.d.ts *new*
     version: Text-1
     containingProjects: 1
         /dev/null/inferredProject1*
@@ -777,20 +777,20 @@ c:/users/username/myprojects/project/x.js (Open) *new*
     containingProjects: 1
         /dev/null/inferredProject1* *default*
 
-TI:: [hh:mm:ss:mss] Global cache location 'c:/a/data', safe file path '/safeList.json', types map path /typesMap.json
-TI:: [hh:mm:ss:mss] Processing cache location 'c:/a/data'
-TI:: [hh:mm:ss:mss] Trying to find 'c:/a/data/package.json'...
-TI:: [hh:mm:ss:mss] Finished processing cache location 'c:/a/data'
-TI:: [hh:mm:ss:mss] Npm config file: c:/a/data/package.json
-TI:: [hh:mm:ss:mss] Npm config file: 'c:/a/data/package.json' is missing, creating new one...
+TI:: [hh:mm:ss:mss] Global cache location 'c:/home/src/projects/globalcache/data', safe file path '/safeList.json', types map path /typesMap.json
+TI:: [hh:mm:ss:mss] Processing cache location 'c:/home/src/projects/globalcache/data'
+TI:: [hh:mm:ss:mss] Trying to find 'c:/home/src/projects/globalcache/data/package.json'...
+TI:: [hh:mm:ss:mss] Finished processing cache location 'c:/home/src/projects/globalcache/data'
+TI:: [hh:mm:ss:mss] Npm config file: c:/home/src/projects/globalcache/data/package.json
+TI:: [hh:mm:ss:mss] Npm config file: 'c:/home/src/projects/globalcache/data/package.json' is missing, creating new one...
 TI:: [hh:mm:ss:mss] Updating types-registry npm package...
 TI:: [hh:mm:ss:mss] npm install --ignore-scripts types-registry@latest
 TI:: [hh:mm:ss:mss] Updated types-registry npm package
 TI:: typing installer creation complete
-//// [c:/a/data/package.json]
+//// [c:/home/src/projects/globalcache/data/package.json]
 { "private": true }
 
-//// [c:/a/data/node_modules/types-registry/index.json]
+//// [c:/home/src/projects/globalcache/data/node_modules/types-registry/index.json]
 {
   "entries": {}
 }
@@ -800,7 +800,7 @@ TI:: [hh:mm:ss:mss] Got install request
     {
       "projectName": "/dev/null/inferredProject1*",
       "fileNames": [
-        "c:/a/lib/lib.d.ts",
+        "c:/home/src/tslibs/ts/lib/lib.d.ts",
         "c:/users/username/myprojects/project/x.js"
       ],
       "compilerOptions": {
@@ -926,7 +926,7 @@ c:/users/username/myprojects/project/tsconfig.json:
   {"pollingInterval":2000}
 
 FsWatches::
-c:/a/lib/lib.d.ts:
+c:/home/src/tslibs/ts/lib/lib.d.ts:
   {}
 
 Projects::
@@ -938,7 +938,7 @@ Info seq  [hh:mm:ss:mss] For files of style //vda1cs4850/c$/users/username/mypro
 currentDirectory:: //vda1cs4850/ useCaseSensitiveFileNames: false
 Info seq  [hh:mm:ss:mss] Provided types map file "/typesMap.json" doesn't exist
 Before request
-//// [//vda1cs4850/a/lib/lib.d.ts]
+//// [//vda1cs4850/home/src/tslibs/ts/lib/lib.d.ts]
 /// <reference no-default-lib="true"/>
 interface Boolean {}
 interface Function {}
@@ -968,7 +968,7 @@ Info seq  [hh:mm:ss:mss] getConfigFileNameForFile:: File: //vda1cs4850/c$/users/
 Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: //vda1cs4850/c$/users/username/myprojects/project/tsconfig.json 2000 undefined WatchType: Config file for the inferred project root
 Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: //vda1cs4850/c$/users/username/myprojects/project/jsconfig.json 2000 undefined WatchType: Config file for the inferred project root
 Info seq  [hh:mm:ss:mss] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
-Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: //vda1cs4850/a/lib/lib.d.ts 500 undefined WatchType: Closed Script info
+Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: //vda1cs4850/home/src/tslibs/ts/lib/lib.d.ts 500 undefined WatchType: Closed Script info
 Info seq  [hh:mm:ss:mss] DirectoryWatcher:: Added:: WatchInfo: //vda1cs4850/c$/users/username/myprojects/project/node_modules/@types 1 undefined Project: /dev/null/inferredProject1* WatchType: Type roots
 Info seq  [hh:mm:ss:mss] Elapsed:: *ms DirectoryWatcher:: Added:: WatchInfo: //vda1cs4850/c$/users/username/myprojects/project/node_modules/@types 1 undefined Project: /dev/null/inferredProject1* WatchType: Type roots
 Info seq  [hh:mm:ss:mss] DirectoryWatcher:: Added:: WatchInfo: //vda1cs4850/c$/users/username/myprojects/node_modules/@types 1 undefined Project: /dev/null/inferredProject1* WatchType: Type roots
@@ -976,11 +976,11 @@ Info seq  [hh:mm:ss:mss] Elapsed:: *ms DirectoryWatcher:: Added:: WatchInfo: //v
 Info seq  [hh:mm:ss:mss] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* projectStateVersion: 1 projectProgramVersion: 0 structureChanged: true structureIsReused:: Not Elapsed:: *ms
 Info seq  [hh:mm:ss:mss] Project '/dev/null/inferredProject1*' (Inferred)
 Info seq  [hh:mm:ss:mss] 	Files (2)
-	//vda1cs4850/a/lib/lib.d.ts Text-1 "/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }"
+	//vda1cs4850/home/src/tslibs/ts/lib/lib.d.ts Text-1 "/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }"
 	//vda1cs4850/c$/users/username/myprojects/project/x.js SVC-1-0 ""
 
 
-	../../../../../a/lib/lib.d.ts
+	../../../../../home/src/tslibs/ts/lib/lib.d.ts
 	  Default library for target 'es5'
 	x.js
 	  Root file specified for compilation
@@ -999,7 +999,7 @@ PolledWatches::
   {"pollingInterval":2000}
 
 FsWatches::
-//vda1cs4850/a/lib/lib.d.ts: *new*
+//vda1cs4850/home/src/tslibs/ts/lib/lib.d.ts: *new*
   {}
 
 Projects::
@@ -1008,29 +1008,29 @@ Projects::
     projectProgramVersion: 0
 
 ScriptInfos::
-//vda1cs4850/a/lib/lib.d.ts *new*
-    version: Text-1
-    containingProjects: 1
-        /dev/null/inferredProject1*
 //vda1cs4850/c$/users/username/myprojects/project/x.js (Open) *new*
     version: SVC-1-0
     containingProjects: 1
         /dev/null/inferredProject1* *default*
+//vda1cs4850/home/src/tslibs/ts/lib/lib.d.ts *new*
+    version: Text-1
+    containingProjects: 1
+        /dev/null/inferredProject1*
 
-TI:: [hh:mm:ss:mss] Global cache location '//vda1cs4850/a/data', safe file path '/safeList.json', types map path /typesMap.json
-TI:: [hh:mm:ss:mss] Processing cache location '//vda1cs4850/a/data'
-TI:: [hh:mm:ss:mss] Trying to find '//vda1cs4850/a/data/package.json'...
-TI:: [hh:mm:ss:mss] Finished processing cache location '//vda1cs4850/a/data'
-TI:: [hh:mm:ss:mss] Npm config file: //vda1cs4850/a/data/package.json
-TI:: [hh:mm:ss:mss] Npm config file: '//vda1cs4850/a/data/package.json' is missing, creating new one...
+TI:: [hh:mm:ss:mss] Global cache location '//vda1cs4850/home/src/projects/globalcache/data', safe file path '/safeList.json', types map path /typesMap.json
+TI:: [hh:mm:ss:mss] Processing cache location '//vda1cs4850/home/src/projects/globalcache/data'
+TI:: [hh:mm:ss:mss] Trying to find '//vda1cs4850/home/src/projects/globalcache/data/package.json'...
+TI:: [hh:mm:ss:mss] Finished processing cache location '//vda1cs4850/home/src/projects/globalcache/data'
+TI:: [hh:mm:ss:mss] Npm config file: //vda1cs4850/home/src/projects/globalcache/data/package.json
+TI:: [hh:mm:ss:mss] Npm config file: '//vda1cs4850/home/src/projects/globalcache/data/package.json' is missing, creating new one...
 TI:: [hh:mm:ss:mss] Updating types-registry npm package...
 TI:: [hh:mm:ss:mss] npm install --ignore-scripts types-registry@latest
 TI:: [hh:mm:ss:mss] Updated types-registry npm package
 TI:: typing installer creation complete
-//// [//vda1cs4850/a/data/package.json]
+//// [//vda1cs4850/home/src/projects/globalcache/data/package.json]
 { "private": true }
 
-//// [//vda1cs4850/a/data/node_modules/types-registry/index.json]
+//// [//vda1cs4850/home/src/projects/globalcache/data/node_modules/types-registry/index.json]
 {
   "entries": {}
 }
@@ -1040,7 +1040,7 @@ TI:: [hh:mm:ss:mss] Got install request
     {
       "projectName": "/dev/null/inferredProject1*",
       "fileNames": [
-        "//vda1cs4850/a/lib/lib.d.ts",
+        "//vda1cs4850/home/src/tslibs/ts/lib/lib.d.ts",
         "//vda1cs4850/c$/users/username/myprojects/project/x.js"
       ],
       "compilerOptions": {
@@ -1166,7 +1166,7 @@ PolledWatches::
   {"pollingInterval":2000}
 
 FsWatches::
-//vda1cs4850/a/lib/lib.d.ts:
+//vda1cs4850/home/src/tslibs/ts/lib/lib.d.ts:
   {}
 
 Projects::

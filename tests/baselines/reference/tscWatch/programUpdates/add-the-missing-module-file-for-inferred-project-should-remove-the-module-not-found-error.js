@@ -3,7 +3,7 @@ Input::
 //// [/users/username/projects/project/file1.ts]
 import * as T from "./moduleFile"; T.bar();
 
-//// [/a/lib/lib.d.ts]
+//// [/home/src/tslibs/ts/lib/lib.d.ts]
 /// <reference no-default-lib="true"/>
 interface Boolean {}
 interface Function {}
@@ -17,7 +17,7 @@ interface String { charAt: any; }
 interface Array<T> { length: number; [n: number]: T; }
 
 
-/a/lib/tsc.js -w /users/username/projects/project/file1.ts
+/home/src/tslibs/ts/lib/tsc.js -w /users/username/projects/project/file1.ts
 Output::
 >> Screen clear
 [[90mHH:MM:SS AM[0m] Starting compilation in watch mode...
@@ -40,7 +40,7 @@ T.bar();
 
 
 FsWatches::
-/a/lib/lib.d.ts: *new*
+/home/src/tslibs/ts/lib/lib.d.ts: *new*
   {}
 /users/username/projects/project/file1.ts: *new*
   {}
@@ -57,15 +57,15 @@ Program options: {
 }
 Program structureReused: Not
 Program files::
-/a/lib/lib.d.ts
+/home/src/tslibs/ts/lib/lib.d.ts
 /users/username/projects/project/file1.ts
 
 Semantic diagnostics in builder refreshed for::
-/a/lib/lib.d.ts
+/home/src/tslibs/ts/lib/lib.d.ts
 /users/username/projects/project/file1.ts
 
 Shape signatures in builder refreshed for::
-/a/lib/lib.d.ts (used version)
+/home/src/tslibs/ts/lib/lib.d.ts (used version)
 /users/username/projects/project/file1.ts (used version)
 
 exitCode:: ExitStatus.undefined
@@ -112,7 +112,7 @@ function bar() { }
 
 
 FsWatches::
-/a/lib/lib.d.ts:
+/home/src/tslibs/ts/lib/lib.d.ts:
   {}
 /users/username/projects/project/file1.ts:
   {}
@@ -132,7 +132,7 @@ Program options: {
 }
 Program structureReused: SafeModules
 Program files::
-/a/lib/lib.d.ts
+/home/src/tslibs/ts/lib/lib.d.ts
 /users/username/projects/project/moduleFile.ts
 /users/username/projects/project/file1.ts
 

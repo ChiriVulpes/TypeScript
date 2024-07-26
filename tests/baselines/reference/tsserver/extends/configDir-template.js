@@ -71,7 +71,7 @@ export const x = 10;
 export const k = 10;
 
 
-//// [/a/lib/lib.d.ts]
+//// [/home/src/tslibs/ts/lib/lib.d.ts]
 /// <reference no-default-lib="true"/>
 interface Boolean {}
 interface Function {}
@@ -207,7 +207,7 @@ Info seq  [hh:mm:ss:mss] File '/home/src/projects/myproject/root2/other/sometype
 Info seq  [hh:mm:ss:mss] Resolving real path for '/home/src/projects/myproject/root2/other/sometype2/index.d.ts', result '/home/src/projects/myproject/root2/other/sometype2/index.d.ts'.
 Info seq  [hh:mm:ss:mss] ======== Module name 'other/sometype2' was successfully resolved to '/home/src/projects/myproject/root2/other/sometype2/index.d.ts'. ========
 Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: /home/src/projects/myproject/root2/other/sometype2/index.d.ts 500 {"excludeDirectories":["/home/src/projects/myproject/node_modules"]} WatchType: Closed Script info
-Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: /a/lib/lib.d.ts 500 {"excludeDirectories":["/home/src/projects/myproject/node_modules"]} WatchType: Closed Script info
+Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: /home/src/tslibs/ts/lib/lib.d.ts 500 {"excludeDirectories":["/home/src/projects/myproject/node_modules"]} WatchType: Closed Script info
 Info seq  [hh:mm:ss:mss] DirectoryWatcher:: Added:: WatchInfo: /home/src/projects/myproject/other 1 {"excludeDirectories":["/home/src/projects/myproject/node_modules"],"excludeFiles":["/home/src/projects/myproject/main.ts"]} Project: /home/src/projects/myproject/tsconfig.json WatchType: Failed Lookup Locations
 Info seq  [hh:mm:ss:mss] Elapsed:: *ms DirectoryWatcher:: Added:: WatchInfo: /home/src/projects/myproject/other 1 {"excludeDirectories":["/home/src/projects/myproject/node_modules"],"excludeFiles":["/home/src/projects/myproject/main.ts"]} Project: /home/src/projects/myproject/tsconfig.json WatchType: Failed Lookup Locations
 Info seq  [hh:mm:ss:mss] DirectoryWatcher:: Added:: WatchInfo: /home/src/projects/myproject/src 1 {"excludeDirectories":["/home/src/projects/myproject/node_modules"],"excludeFiles":["/home/src/projects/myproject/main.ts"]} Project: /home/src/projects/myproject/tsconfig.json WatchType: Failed Lookup Locations
@@ -222,14 +222,14 @@ Info seq  [hh:mm:ss:mss] Elapsed:: *ms DirectoryWatcher:: Added:: WatchInfo: /ho
 Info seq  [hh:mm:ss:mss] Finishing updateGraphWorker: Project: /home/src/projects/myproject/tsconfig.json projectStateVersion: 1 projectProgramVersion: 0 structureChanged: true structureIsReused:: Not Elapsed:: *ms
 Info seq  [hh:mm:ss:mss] Project '/home/src/projects/myproject/tsconfig.json' (Configured)
 Info seq  [hh:mm:ss:mss] 	Files (5)
-	/a/lib/lib.d.ts Text-1 "/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }"
+	/home/src/tslibs/ts/lib/lib.d.ts Text-1 "/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }"
 	/home/src/projects/myproject/types/sometype.ts Text-1 "export const x = 10;\n"
 	/home/src/projects/myproject/main.ts Text-1 "// some comment\nexport const y = 10;\nimport { x } from \"@myscope/sometype\";\n"
 	/home/src/projects/myproject/root2/other/sometype2/index.d.ts Text-1 "export const k = 10;\n"
 	/home/src/projects/myproject/src/secondary.ts SVC-1-0 "// some comment\nexport const z = 10;\nimport { k } from \"other/sometype2\";\n"
 
 
-	../../../../a/lib/lib.d.ts
+	../../tslibs/ts/lib/lib.d.ts
 	  Default library for target 'es5'
 	types/sometype.ts
 	  Imported via "@myscope/sometype" from file 'main.ts'
@@ -342,8 +342,6 @@ PolledWatches::
   {"pollingInterval":500}
 
 FsWatches::
-/a/lib/lib.d.ts: *new*
-  {}
 /home/src/projects/configs/first/tsconfig.json: *new*
   {}
 /home/src/projects/configs/second/tsconfig.json: *new*
@@ -355,6 +353,8 @@ FsWatches::
 /home/src/projects/myproject/tsconfig.json: *new*
   {}
 /home/src/projects/myproject/types/sometype.ts: *new*
+  {}
+/home/src/tslibs/ts/lib/lib.d.ts: *new*
   {}
 
 FsWatchesRecursive::
@@ -371,10 +371,6 @@ Projects::
     projectProgramVersion: 1
 
 ScriptInfos::
-/a/lib/lib.d.ts *new*
-    version: Text-1
-    containingProjects: 1
-        /home/src/projects/myproject/tsconfig.json
 /home/src/projects/myproject/main.ts *new*
     version: Text-1
     containingProjects: 1
@@ -388,6 +384,10 @@ ScriptInfos::
     containingProjects: 1
         /home/src/projects/myproject/tsconfig.json *default*
 /home/src/projects/myproject/types/sometype.ts *new*
+    version: Text-1
+    containingProjects: 1
+        /home/src/projects/myproject/tsconfig.json
+/home/src/tslibs/ts/lib/lib.d.ts *new*
     version: Text-1
     containingProjects: 1
         /home/src/projects/myproject/tsconfig.json
@@ -502,7 +502,7 @@ Info seq  [hh:mm:ss:mss] Elapsed:: *ms DirectoryWatcher:: Close:: WatchInfo: /ho
 Info seq  [hh:mm:ss:mss] Finishing updateGraphWorker: Project: /home/src/projects/myproject/tsconfig.json projectStateVersion: 2 projectProgramVersion: 1 structureChanged: true structureIsReused:: Not Elapsed:: *ms
 Info seq  [hh:mm:ss:mss] Project '/home/src/projects/myproject/tsconfig.json' (Configured)
 Info seq  [hh:mm:ss:mss] 	Files (5)
-	/a/lib/lib.d.ts Text-1 "/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }"
+	/home/src/tslibs/ts/lib/lib.d.ts Text-1 "/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }"
 	/home/src/projects/myproject/types/sometype.ts Text-1 "export const x = 10;\n"
 	/home/src/projects/myproject/main.ts Text-1 "// some comment\nexport const y = 10;\nimport { x } from \"@myscope/sometype\";\n"
 	/home/src/projects/myproject/root2/other/sometype2/index.d.ts Text-1 "export const k = 10;\n"
@@ -567,8 +567,6 @@ PolledWatches::
   {"pollingInterval":500}
 
 FsWatches::
-/a/lib/lib.d.ts:
-  {}
 /home/src/projects/configs/first/tsconfig.json:
   {}
 /home/src/projects/configs/second/tsconfig.json:
@@ -580,6 +578,8 @@ FsWatches::
 /home/src/projects/myproject/tsconfig.json:
   {}
 /home/src/projects/myproject/types/sometype.ts:
+  {}
+/home/src/tslibs/ts/lib/lib.d.ts:
   {}
 
 FsWatchesRecursive::

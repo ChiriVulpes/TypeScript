@@ -1,10 +1,10 @@
 currentDirectory:: / useCaseSensitiveFileNames: false
 Input::
-//// [/a/app.ts]
+//// [/home/src/projects/a/app.ts]
 var x = 1;
 var y = 2;
 
-//// [/a/lib/lib.d.ts]
+//// [/home/src/tslibs/ts/lib/lib.d.ts]
 /// <reference no-default-lib="true"/>
 interface Boolean {}
 interface Function {}
@@ -18,7 +18,7 @@ interface String { charAt: any; }
 interface Array<T> { length: number; [n: number]: T; }
 
 
-/a/lib/tsc.js --w /a/app.ts
+/home/src/tslibs/ts/lib/tsc.js --w /home/src/projects/a/app.ts
 Output::
 >> Screen clear
 [[90mHH:MM:SS AM[0m] Starting compilation in watch mode...
@@ -27,43 +27,43 @@ Output::
 
 
 
-//// [/a/app.js]
+//// [/home/src/projects/a/app.js]
 var x = 1;
 var y = 2;
 
 
 
 FsWatches::
-/a/app.ts: *new*
+/home/src/projects/a/app.ts: *new*
   {}
-/a/lib/lib.d.ts: *new*
+/home/src/tslibs/ts/lib/lib.d.ts: *new*
   {}
 
 Program root files: [
-  "/a/app.ts"
+  "/home/src/projects/a/app.ts"
 ]
 Program options: {
   "watch": true
 }
 Program structureReused: Not
 Program files::
-/a/lib/lib.d.ts
-/a/app.ts
+/home/src/tslibs/ts/lib/lib.d.ts
+/home/src/projects/a/app.ts
 
 Semantic diagnostics in builder refreshed for::
-/a/lib/lib.d.ts
-/a/app.ts
+/home/src/tslibs/ts/lib/lib.d.ts
+/home/src/projects/a/app.ts
 
 Shape signatures in builder refreshed for::
-/a/lib/lib.d.ts (used version)
-/a/app.ts (used version)
+/home/src/tslibs/ts/lib/lib.d.ts (used version)
+/home/src/projects/a/app.ts (used version)
 
 exitCode:: ExitStatus.undefined
 
 Change:: Append a line
 
 Input::
-//// [/a/app.ts]
+//// [/home/src/projects/a/app.ts]
 var x = 1;
 var y = 2;
 var z = 3;
@@ -85,7 +85,7 @@ Output::
 
 
 
-//// [/a/app.js]
+//// [/home/src/projects/a/app.js]
 var x = 1;
 var y = 2;
 var z = 3;
@@ -94,21 +94,21 @@ var z = 3;
 
 
 Program root files: [
-  "/a/app.ts"
+  "/home/src/projects/a/app.ts"
 ]
 Program options: {
   "watch": true
 }
 Program structureReused: Completely
 Program files::
-/a/lib/lib.d.ts
-/a/app.ts
+/home/src/tslibs/ts/lib/lib.d.ts
+/home/src/projects/a/app.ts
 
 Semantic diagnostics in builder refreshed for::
-/a/lib/lib.d.ts
-/a/app.ts
+/home/src/tslibs/ts/lib/lib.d.ts
+/home/src/projects/a/app.ts
 
 Shape signatures in builder refreshed for::
-/a/app.ts (computed .d.ts)
+/home/src/projects/a/app.ts (computed .d.ts)
 
 exitCode:: ExitStatus.undefined

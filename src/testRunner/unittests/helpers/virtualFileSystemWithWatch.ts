@@ -36,6 +36,7 @@ import {
     insertSorted,
     isArray,
     isString,
+    libMap,
     mapDefined,
     matchFiles,
     ModuleImportResult,
@@ -54,7 +55,7 @@ import { timeIncrements } from "../../_namespaces/vfs.js";
 import { sanitizeSysOutput } from "./baseline.js";
 
 export const libFile: File = {
-    path: "/a/lib/lib.d.ts",
+    path: "/home/src/tslibs/ts/lib/lib.d.ts",
     content: `/// <reference no-default-lib="true"/>
 interface Boolean {}
 interface Function {}
@@ -68,8 +69,12 @@ interface String { charAt: any; }
 interface Array<T> { length: number; [n: number]: T; }`,
 };
 
-function getExecutingFilePathFromLibFile(): string {
-    return combinePaths(getDirectoryPath(libFile.path), "tsc.js");
+export function getPathForTypeScriptTestLocation(fileName: string) {
+    return combinePaths(getDirectoryPath(libFile.path), fileName);
+}
+
+export function getTypeScriptLibTestLocation(libName: string) {
+    return getPathForTypeScriptTestLocation(libMap.get(libName) ?? `lib.${libName}.d.ts`);
 }
 
 export const enum TestServerHostOsFlavor {
@@ -391,7 +396,7 @@ export class TestServerHost implements server.ServerHost, FormatDiagnosticsHost,
         this.getCanonicalFileName = createGetCanonicalFileName(!!useCaseSensitiveFileNames);
         this.watchUtils = createWatchUtils("PolledWatches", "FsWatches", s => this.getCanonicalFileName(s), this);
         this.toPath = s => toPath(s, currentDirectory, this.getCanonicalFileName);
-        this.executingFilePath = this.getHostSpecificPath(executingFilePath || getExecutingFilePathFromLibFile());
+        this.executingFilePath = this.getHostSpecificPath(executingFilePath || getPathForTypeScriptTestLocation("tsc.js"));
         this.currentDirectory = this.getHostSpecificPath(currentDirectory);
         this.runWithFallbackPolling = !!runWithFallbackPolling;
         const tscWatchFile = this.environmentVariables && this.environmentVariables.get("TSC_WATCHFILE");

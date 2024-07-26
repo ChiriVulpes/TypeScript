@@ -16,7 +16,7 @@ import {
     TestServerHost,
 } from "../helpers/virtualFileSystemWithWatch.js";
 
-describe("unittests:: tsc-watch:: emit file --incremental", () => {
+describe("unittests:: tscWatch:: incremental:: emit file --incremental", () => {
     const project = "/users/username/projects/project";
 
     const configFile: File = {
@@ -398,11 +398,11 @@ export const Fragment: unique symbol;
         subScenario: "tsbuildinfo has error",
         sys: () =>
             createWatchedSystem({
-                "/src/project/main.ts": "export const x = 10;",
-                "/src/project/tsconfig.json": "{}",
-                "/src/project/tsconfig.tsbuildinfo": "Some random string",
+                "/home/src/projects/project/main.ts": "export const x = 10;",
+                "/home/src/projects/project/tsconfig.json": "{}",
+                "/home/src/projects/project/tsconfig.tsbuildinfo": "Some random string",
                 [libFile.path]: libFile.content,
-            }),
-        commandLineArgs: ["--p", "src/project", "-i", "-w"],
+            }, { currentDirectory: "/home/src/projects/project" }),
+        commandLineArgs: ["-i", "-w"],
     });
 });

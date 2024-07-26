@@ -31,8 +31,8 @@ var x = 10;`,
 describe("unittests:: tsserver:: dynamicFiles:: Untitled files", () => {
     const untitledFile = "untitled:^Untitled-1";
     it("Can convert positions to locations", () => {
-        const aTs: File = { path: "/proj/a.ts", content: "" };
-        const tsconfig: File = { path: "/proj/tsconfig.json", content: "{}" };
+        const aTs: File = { path: "/home/src/projects/project/proj/a.ts", content: "" };
+        const tsconfig: File = { path: "/home/src/projects/project/proj/tsconfig.json", content: "{}" };
         const host = createServerHost([aTs, tsconfig]);
         const session = new TestSession({ host, useInferredProjectPerProjectRoot: true });
 
@@ -44,7 +44,7 @@ describe("unittests:: tsserver:: dynamicFiles:: Untitled files", () => {
                 file: untitledFile,
                 fileContent: `/// <reference path="../../../../../../typings/@epic/Core.d.ts" />\nlet foo = 1;\nfooo/**/`,
                 scriptKindName: "TS",
-                projectRootPath: "/proj",
+                projectRootPath: "/home/src/projects/project/proj",
             },
         });
         session.executeCommandSeq<ts.server.protocol.CodeFixRequest>({

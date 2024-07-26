@@ -15,7 +15,7 @@ import {
     SymLink,
 } from "../helpers/virtualFileSystemWithWatch.js";
 
-describe("unittests:: tsc-watch:: resolutionCache:: tsc-watch module resolution caching", () => {
+describe("unittests:: tscWatch:: resolutionCache:: tsc-watch module resolution caching", () => {
     const scenario = "resolutionCache";
     it("caching works", () => {
         const root = {

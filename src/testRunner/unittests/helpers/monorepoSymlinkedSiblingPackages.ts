@@ -13,6 +13,7 @@ import {
 import {
     createServerHost,
     createWatchedSystem,
+    getTypeScriptLibTestLocation,
     libFile,
     osFlavorToString,
     TestServerHost,
@@ -53,7 +54,7 @@ function getMonorepoSymlinkedSiblingPackagesSys(forTsserver: boolean, built: boo
             type MyBarType = BarType;
         `,
         "/home/src/projects/project/node_modules/package1": { symLink: "/home/src/projects/project/packages/package1" },
-        "/a/lib/lib.es2016.full.d.ts": libContent,
+        [getTypeScriptLibTestLocation("es2016.full")]: libContent,
     }, { currentDirectory: "/home/src/projects/project", osFlavor });
     if (built) buildMonorepoSymlinkedSiblingPackage1(sys);
     return sys;

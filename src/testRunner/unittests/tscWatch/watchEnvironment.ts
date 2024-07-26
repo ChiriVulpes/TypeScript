@@ -1,8 +1,6 @@
 import * as ts from "../../_namespaces/ts.js";
 import { jsonToReadableText } from "../helpers.js";
 import {
-    commonFile1,
-    commonFile2,
     noopChange,
     verifyTscWatch,
 } from "../helpers/tscWatch.js";
@@ -17,14 +15,14 @@ import {
     Tsc_WatchFile,
 } from "../helpers/virtualFileSystemWithWatch.js";
 
-describe("unittests:: tsc-watch:: watchEnvironment:: tsc-watch with different polling/non polling options", () => {
+describe("unittests:: tscWatch:: watchEnvironment:: tsc-watch with different polling/non polling options", () => {
     const scenario = "watchEnvironment";
     verifyTscWatch({
         scenario,
         subScenario: "watchFile/using dynamic priority polling",
-        commandLineArgs: ["--w", `/a/username/project/typescript.ts`],
+        commandLineArgs: ["--w", `/a/username/projects/project/typescript.ts`],
         sys: () => {
-            const projectFolder = "/a/username/project";
+            const projectFolder = "/a/username/projects/project";
             const file1: File = {
                 path: `${projectFolder}/typescript.ts`,
                 content: "var z = 10;",
@@ -51,7 +49,7 @@ describe("unittests:: tsc-watch:: watchEnvironment:: tsc-watch with different po
             {
                 caption: "Make change to file",
                 // Make a change to file
-                edit: sys => sys.writeFile("/a/username/project/typescript.ts", "var zz30 = 100;"),
+                edit: sys => sys.writeFile("/a/username/projects/project/typescript.ts", "var zz30 = 100;"),
                 // During this timeout the file would be detected as unchanged
                 timeouts: sys => sys.runQueuedTimeoutCallbacks(),
             },
@@ -86,15 +84,23 @@ describe("unittests:: tsc-watch:: watchEnvironment:: tsc-watch with different po
     verifyTscWatch({
         scenario,
         subScenario: "watchFile/using fixed chunk size polling",
-        commandLineArgs: ["-w", "-p", "/a/b/tsconfig.json"],
+        commandLineArgs: ["-w", "-p", "/user/username/projects/project/tsconfig.json"],
         sys: () => {
             const configFile: File = {
-                path: "/a/b/tsconfig.json",
+                path: "/user/username/projects/project/tsconfig.json",
                 content: jsonToReadableText({
                     watchOptions: {
                         watchFile: "FixedChunkSizePolling",
                     },
                 }),
+            };
+            const commonFile1: File = {
+                path: "/user/username/projects/project/commonFile1.ts",
+                content: "let x = 1",
+            };
+            const commonFile2: File = {
+                path: "/user/username/projects/project/commonFile2.ts",
+                content: "let y = 1",
             };
             const files = [libFile, commonFile1, commonFile2, configFile];
             return createWatchedSystem(files);
@@ -115,7 +121,7 @@ describe("unittests:: tsc-watch:: watchEnvironment:: tsc-watch with different po
             {
                 caption: "Make change to file but should detect as changed and schedule program update",
                 // Make a change to file
-                edit: sys => sys.writeFile(commonFile1.path, "var zz30 = 100;"),
+                edit: sys => sys.writeFile("/user/username/projects/project/commonFile1.ts", "var zz30 = 100;"),
                 timeouts: sys => sys.runQueuedTimeoutCallbacks(),
             },
             {
@@ -139,7 +145,7 @@ describe("unittests:: tsc-watch:: watchEnvironment:: tsc-watch with different po
 
     describe("tsc-watch when watchDirectories implementation", () => {
         function verifyRenamingFileInSubFolder(subScenario: string, tscWatchDirectory: Tsc_WatchDirectory) {
-            const projectFolder = "/a/username/project";
+            const projectFolder = "/a/username/projects/project";
             const projectSrcFolder = `${projectFolder}/src`;
             const configFile: File = {
                 path: `${projectFolder}/tsconfig.json`,
@@ -421,15 +427,23 @@ describe("unittests:: tsc-watch:: watchEnvironment:: tsc-watch with different po
         verifyTscWatch({
             scenario,
             subScenario: "watchOptions/with watchFile option",
-            commandLineArgs: ["-w", "-p", "/a/b/tsconfig.json"],
+            commandLineArgs: ["-w", "-p", "/user/username/projects/project/tsconfig.json"],
             sys: () => {
                 const configFile: File = {
-                    path: "/a/b/tsconfig.json",
+                    path: "/user/username/projects/project/tsconfig.json",
                     content: jsonToReadableText({
                         watchOptions: {
                             watchFile: "UseFsEvents",
                         },
                     }),
+                };
+                const commonFile1: File = {
+                    path: "/user/username/projects/project/commonFile1.ts",
+                    content: "let x = 1",
+                };
+                const commonFile2: File = {
+                    path: "/user/username/projects/project/commonFile2.ts",
+                    content: "let y = 1",
                 };
                 const files = [libFile, commonFile1, commonFile2, configFile];
                 return createWatchedSystem(files);
@@ -439,15 +453,23 @@ describe("unittests:: tsc-watch:: watchEnvironment:: tsc-watch with different po
         verifyTscWatch({
             scenario,
             subScenario: "watchOptions/with watchDirectory option",
-            commandLineArgs: ["-w", "-p", "/a/b/tsconfig.json"],
+            commandLineArgs: ["-w", "-p", "/user/username/projects/project/tsconfig.json"],
             sys: () => {
                 const configFile: File = {
-                    path: "/a/b/tsconfig.json",
+                    path: "/user/username/projects/project/tsconfig.json",
                     content: jsonToReadableText({
                         watchOptions: {
                             watchDirectory: "UseFsEvents",
                         },
                     }),
+                };
+                const commonFile1: File = {
+                    path: "/user/username/projects/project/commonFile1.ts",
+                    content: "let x = 1",
+                };
+                const commonFile2: File = {
+                    path: "/user/username/projects/project/commonFile2.ts",
+                    content: "let y = 1",
                 };
                 const files = [libFile, commonFile1, commonFile2, configFile];
                 return createWatchedSystem(files, { osFlavor: TestServerHostOsFlavor.Linux });
@@ -457,15 +479,23 @@ describe("unittests:: tsc-watch:: watchEnvironment:: tsc-watch with different po
         verifyTscWatch({
             scenario,
             subScenario: "watchOptions/with fallbackPolling option",
-            commandLineArgs: ["-w", "-p", "/a/b/tsconfig.json"],
+            commandLineArgs: ["-w", "-p", "/user/username/projects/project/tsconfig.json"],
             sys: () => {
                 const configFile: File = {
-                    path: "/a/b/tsconfig.json",
+                    path: "/user/username/projects/project/tsconfig.json",
                     content: jsonToReadableText({
                         watchOptions: {
                             fallbackPolling: "PriorityInterval",
                         },
                     }),
+                };
+                const commonFile1: File = {
+                    path: "/user/username/projects/project/commonFile1.ts",
+                    content: "let x = 1",
+                };
+                const commonFile2: File = {
+                    path: "/user/username/projects/project/commonFile2.ts",
+                    content: "let y = 1",
                 };
                 const files = [libFile, commonFile1, commonFile2, configFile];
                 return createWatchedSystem(files, { osFlavor: TestServerHostOsFlavor.Linux, runWithFallbackPolling: true });
@@ -475,11 +505,19 @@ describe("unittests:: tsc-watch:: watchEnvironment:: tsc-watch with different po
         verifyTscWatch({
             scenario,
             subScenario: "watchOptions/with watchFile as watch options to extend",
-            commandLineArgs: ["-w", "-p", "/a/b/tsconfig.json", "--watchFile", "UseFsEvents"],
+            commandLineArgs: ["-w", "-p", "/user/username/projects/project/tsconfig.json", "--watchFile", "UseFsEvents"],
             sys: () => {
                 const configFile: File = {
-                    path: "/a/b/tsconfig.json",
+                    path: "/user/username/projects/project/tsconfig.json",
                     content: "{}",
+                };
+                const commonFile1: File = {
+                    path: "/user/username/projects/project/commonFile1.ts",
+                    content: "let x = 1",
+                };
+                const commonFile2: File = {
+                    path: "/user/username/projects/project/commonFile2.ts",
+                    content: "let y = 1",
                 };
                 const files = [libFile, commonFile1, commonFile2, configFile];
                 return createWatchedSystem(files);

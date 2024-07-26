@@ -177,6 +177,12 @@ export interface TestTypingsInstallerOptions {
     throttledRequests?: number;
 }
 
+const typeScriptTypingInstallerCacheTest = "/home/src/projects/globalcache/data";
+
+export function getPathForTypeScriptTypingInstallerCacheTest(fileName: string) {
+    return `${typeScriptTypingInstallerCacheTest}/${fileName}`;
+}
+
 export class TestTypingsInstallerAdapter extends ts.server.TypingsInstallerAdapter {
     worker: TestTypingsInstallerWorker | undefined;
     session!: TestSession;
@@ -187,7 +193,8 @@ export class TestTypingsInstallerAdapter extends ts.server.TypingsInstallerAdapt
     readonly throttledRequests: number | undefined;
 
     constructor(options: TestTypingsInstallerOptions) {
-        const globalTypingsCacheLocation = options.globalTypingsCacheLocation || options.host.getHostSpecificPath("/a/data");
+        const globalTypingsCacheLocation = options.globalTypingsCacheLocation ||
+            options.host.getHostSpecificPath(typeScriptTypingInstallerCacheTest);
         super(
             /*telemetryEnabled*/ false,
             options.throttledRequests === undefined ?

@@ -7,7 +7,7 @@ import {
     libFile,
 } from "../helpers/virtualFileSystemWithWatch.js";
 
-describe("unittests:: tsbuildWatch:: watchMode:: with reexport when referenced project reexports definitions from another file", () => {
+describe("unittests:: tsbuildWatch:: watchMode:: reexport:: with reexport when referenced project reexports definitions from another file", () => {
     verifyTscWatch({
         scenario: "reexport",
         subScenario: "Reports errors correctly",

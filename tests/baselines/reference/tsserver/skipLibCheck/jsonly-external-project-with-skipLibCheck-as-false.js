@@ -1,10 +1,10 @@
 currentDirectory:: / useCaseSensitiveFileNames: false
 Info seq  [hh:mm:ss:mss] Provided types map file "/typesMap.json" doesn't exist
 Before request
-//// [/a/b/file1.js]
+//// [/home/src/projects/project/a/b/file1.js]
 let x =1;
 
-//// [/a/b/file2.d.ts]
+//// [/home/src/projects/project/a/b/file2.d.ts]
 
                 interface T {
                     name: string;
@@ -21,10 +21,10 @@ Info seq  [hh:mm:ss:mss] request:
         "projectFileName": "project1",
         "rootFiles": [
           {
-            "fileName": "/a/b/file1.js"
+            "fileName": "/home/src/projects/project/a/b/file1.js"
           },
           {
-            "fileName": "/a/b/file2.d.ts"
+            "fileName": "/home/src/projects/project/a/b/file2.d.ts"
           }
         ],
         "options": {
@@ -34,33 +34,33 @@ Info seq  [hh:mm:ss:mss] request:
       "seq": 1,
       "type": "request"
     }
-Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: /a/b/file1.js 500 undefined WatchType: Closed Script info
-Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: /a/b/file2.d.ts 500 undefined WatchType: Closed Script info
+Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: /home/src/projects/project/a/b/file1.js 500 undefined WatchType: Closed Script info
+Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: /home/src/projects/project/a/b/file2.d.ts 500 undefined WatchType: Closed Script info
 Info seq  [hh:mm:ss:mss] Starting updateGraphWorker: Project: project1
-Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: /a/lib/lib.d.ts 500 undefined Project: project1 WatchType: Missing file
+Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: /home/src/tslibs/ts/lib/lib.d.ts 500 undefined Project: project1 WatchType: Missing file
 Info seq  [hh:mm:ss:mss] Finishing updateGraphWorker: Project: project1 projectStateVersion: 1 projectProgramVersion: 0 structureChanged: true structureIsReused:: Not Elapsed:: *ms
 Info seq  [hh:mm:ss:mss] Project 'project1' (External)
 Info seq  [hh:mm:ss:mss] 	Files (2)
-	/a/b/file1.js Text-1 "let x =1;"
-	/a/b/file2.d.ts Text-1 "\n                interface T {\n                    name: string;\n                };\n                interface T {\n                    name: number;\n                };"
+	/home/src/projects/project/a/b/file1.js Text-1 "let x =1;"
+	/home/src/projects/project/a/b/file2.d.ts Text-1 "\n                interface T {\n                    name: string;\n                };\n                interface T {\n                    name: number;\n                };"
 
 
-	a/b/file1.js
+	home/src/projects/project/a/b/file1.js
 	  Root file specified for compilation
-	a/b/file2.d.ts
+	home/src/projects/project/a/b/file2.d.ts
 	  Root file specified for compilation
 
 Info seq  [hh:mm:ss:mss] -----------------------------------------------
 TI:: Creating typing installer
 
 PolledWatches::
-/a/lib/lib.d.ts: *new*
+/home/src/tslibs/ts/lib/lib.d.ts: *new*
   {"pollingInterval":500}
 
 FsWatches::
-/a/b/file1.js: *new*
+/home/src/projects/project/a/b/file1.js: *new*
   {}
-/a/b/file2.d.ts: *new*
+/home/src/projects/project/a/b/file2.d.ts: *new*
   {}
 
 Projects::
@@ -69,29 +69,29 @@ project1 (External) *new*
     projectProgramVersion: 0
 
 ScriptInfos::
-/a/b/file1.js *new*
+/home/src/projects/project/a/b/file1.js *new*
     version: Text-1
     containingProjects: 1
         project1
-/a/b/file2.d.ts *new*
+/home/src/projects/project/a/b/file2.d.ts *new*
     version: Text-1
     containingProjects: 1
         project1
 
-TI:: [hh:mm:ss:mss] Global cache location '/a/data', safe file path '/safeList.json', types map path /typesMap.json
-TI:: [hh:mm:ss:mss] Processing cache location '/a/data'
-TI:: [hh:mm:ss:mss] Trying to find '/a/data/package.json'...
-TI:: [hh:mm:ss:mss] Finished processing cache location '/a/data'
-TI:: [hh:mm:ss:mss] Npm config file: /a/data/package.json
-TI:: [hh:mm:ss:mss] Npm config file: '/a/data/package.json' is missing, creating new one...
+TI:: [hh:mm:ss:mss] Global cache location '/home/src/projects/globalcache/data', safe file path '/safeList.json', types map path /typesMap.json
+TI:: [hh:mm:ss:mss] Processing cache location '/home/src/projects/globalcache/data'
+TI:: [hh:mm:ss:mss] Trying to find '/home/src/projects/globalcache/data/package.json'...
+TI:: [hh:mm:ss:mss] Finished processing cache location '/home/src/projects/globalcache/data'
+TI:: [hh:mm:ss:mss] Npm config file: /home/src/projects/globalcache/data/package.json
+TI:: [hh:mm:ss:mss] Npm config file: '/home/src/projects/globalcache/data/package.json' is missing, creating new one...
 TI:: [hh:mm:ss:mss] Updating types-registry npm package...
 TI:: [hh:mm:ss:mss] npm install --ignore-scripts types-registry@latest
 TI:: [hh:mm:ss:mss] Updated types-registry npm package
 TI:: typing installer creation complete
-//// [/a/data/package.json]
+//// [/home/src/projects/globalcache/data/package.json]
 { "private": true }
 
-//// [/a/data/node_modules/types-registry/index.json]
+//// [/home/src/projects/globalcache/data/node_modules/types-registry/index.json]
 {
   "entries": {}
 }
@@ -101,8 +101,8 @@ TI:: [hh:mm:ss:mss] Got install request
     {
       "projectName": "project1",
       "fileNames": [
-        "/a/b/file1.js",
-        "/a/b/file2.d.ts"
+        "/home/src/projects/project/a/b/file1.js",
+        "/home/src/projects/project/a/b/file2.d.ts"
       ],
       "compilerOptions": {
         "skipLibCheck": false,
@@ -126,8 +126,8 @@ TI:: [hh:mm:ss:mss] Finished typings discovery:
       "cachedTypingPaths": [],
       "newTypingNames": [],
       "filesToWatch": [
-        "/a/b/bower_components",
-        "/a/b/node_modules",
+        "/home/src/projects/project/a/b/bower_components",
+        "/home/src/projects/project/a/b/node_modules",
         "/bower_components",
         "/node_modules"
       ]
@@ -137,14 +137,14 @@ TI:: [hh:mm:ss:mss] Sending response:
       "kind": "action::watchTypingLocations",
       "projectName": "project1",
       "files": [
-        "/a/b/bower_components",
-        "/a/b/node_modules",
+        "/home/src/projects/project/a/b/bower_components",
+        "/home/src/projects/project/a/b/node_modules",
         "/bower_components",
         "/node_modules"
       ]
     }
-Info seq  [hh:mm:ss:mss] DirectoryWatcher:: Added:: WatchInfo: /a 1 undefined Project: project1 WatchType: Directory location for typing installer
-Info seq  [hh:mm:ss:mss] Elapsed:: *ms DirectoryWatcher:: Added:: WatchInfo: /a 1 undefined Project: project1 WatchType: Directory location for typing installer
+Info seq  [hh:mm:ss:mss] DirectoryWatcher:: Added:: WatchInfo: /home 1 undefined Project: project1 WatchType: Directory location for typing installer
+Info seq  [hh:mm:ss:mss] Elapsed:: *ms DirectoryWatcher:: Added:: WatchInfo: /home 1 undefined Project: project1 WatchType: Directory location for typing installer
 Info seq  [hh:mm:ss:mss] DirectoryWatcher:: Added:: WatchInfo: /bower_components 1 undefined Project: project1 WatchType: Directory location for typing installer
 Info seq  [hh:mm:ss:mss] Elapsed:: *ms DirectoryWatcher:: Added:: WatchInfo: /bower_components 1 undefined Project: project1 WatchType: Directory location for typing installer
 Info seq  [hh:mm:ss:mss] DirectoryWatcher:: Added:: WatchInfo: /node_modules 1 undefined Project: project1 WatchType: Directory location for typing installer
@@ -244,21 +244,21 @@ Info seq  [hh:mm:ss:mss] response:
 After request
 
 PolledWatches::
-/a/lib/lib.d.ts:
-  {"pollingInterval":500}
 /bower_components: *new*
+  {"pollingInterval":500}
+/home/src/tslibs/ts/lib/lib.d.ts:
   {"pollingInterval":500}
 /node_modules: *new*
   {"pollingInterval":500}
 
 FsWatches::
-/a/b/file1.js:
+/home/src/projects/project/a/b/file1.js:
   {}
-/a/b/file2.d.ts:
+/home/src/projects/project/a/b/file2.d.ts:
   {}
 
 FsWatchesRecursive::
-/a: *new*
+/home: *new*
   {}
 
 Projects::
@@ -272,7 +272,7 @@ Info seq  [hh:mm:ss:mss] request:
     {
       "command": "semanticDiagnosticsSync",
       "arguments": {
-        "file": "/a/b/file2.d.ts"
+        "file": "/home/src/projects/project/a/b/file2.d.ts"
       },
       "seq": 2,
       "type": "request"

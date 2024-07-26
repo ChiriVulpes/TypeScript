@@ -17,7 +17,7 @@ export const cc = 10;
 //// [/user/username/projects/myproject/node_modules/something/index.d.ts]
 export const something = 10;
 
-//// [/a/lib/lib.d.ts]
+//// [/home/src/tslibs/ts/lib/lib.d.ts]
 /// <reference no-default-lib="true"/>
 interface Boolean {}
 interface Function {}
